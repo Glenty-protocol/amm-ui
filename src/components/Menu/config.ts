@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://www.goosedefi.com/'
+    href: 'https://testing.kittyswap.finance/'
   },
   {
     label: 'Trade',
@@ -24,17 +24,17 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'https://www.goosedefi.com/farms'
+    href: 'https://testing.kittyswap.finance/farms'
   },
   {
     label: 'Nests',
     icon: 'PoolIcon',
-    href: 'https://www.goosedefi.com/nests'
+    href: 'https://testing.kittyswap.finance/nests'
   },
   // {
   //   label: 'Lottery',
   //   icon: 'TicketIcon',
-  //   href: 'https://www.goosedefi.com/lottery'
+  //   href: 'https://testing.kittyswap.finance/lottery'
   // },
   {
     label: 'Info',

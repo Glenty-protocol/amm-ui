@@ -11,8 +11,8 @@
   "keywords": ["pancake", "default"],
   "tokens": [
     {
-      "name": "Goose Golden Egg",
-      "symbol": "EGG",
+      "name": "Kitty Golden Kitty",
+      "symbol": "KITTY",
       "address": "0xF952Fc3ca7325Cc27D15885d37117676d25BfdA6",
       "chainId": 56,
       "decimals": 18
