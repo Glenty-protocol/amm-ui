@@ -1,10 +1,15 @@
 import { MenuEntry } from '@pancakeswap-libs/uikit'
 
 const config: MenuEntry[] = [
+  // {
+  //   label: 'Home',
+  //   icon: 'HomeIcon',
+  //   href: 'https://bears.finance/'
+  // },
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://testing.kittyswap.finance/'
+    href: 'http://kittyswap.finance',
   },
   {
     label: 'Trade',
@@ -24,17 +29,27 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'https://testing.kittyswap.finance/farms'
+    href: 'http://kittyswap.finance/farms',
   },
   {
-    label: 'Nests',
+    label: 'Pools',
     icon: 'PoolIcon',
-    href: 'https://testing.kittyswap.finance/nests'
+    href: 'http://kittyswap.finance/pools',
+  },
+  {
+    label: 'Lottery (soon)',
+    icon: 'TicketIcon',
+    href: '#',
+  },
+  {
+    label: 'Catsino Games (soon)',
+    icon: 'IfoIcon',
+    href: '#',
   },
   // {
   //   label: 'Lottery',
   //   icon: 'TicketIcon',
-  //   href: 'https://testing.kittyswap.finance/lottery'
+  //   href: 'https://testing.bears.finance/lottery'
   // },
   {
     label: 'Info',
@@ -42,20 +57,20 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'PancakeSwap',
-        href: 'https://pancakeswap.info/token/0xF952Fc3ca7325Cc27D15885d37117676d25BfdA6',
+        href: 'https://pancakeswap.info/token/0x27162118C8690E30B584EC759E1Aa52AfDab4488',
       },
-      {
-        label: 'CoinGecko',
-        href: 'https://www.coingecko.com/en/coins/goose-finance',
-      },
-      {
-        label: 'CoinMarketCap',
-        href: 'https://coinmarketcap.com/currencies/goose-finance/',
-      },
-      {
-        label: 'AstroTools',
-        href: 'https://app.astrotools.io/pancake-pair-explorer/0x19e7cbecdd23a16dfa5573df54d98f7caae03019',
-      },
+      // {
+      //   label: 'GitHub',
+      //   href: 'https://github.com/BEAR-finance',
+      // },
+      // {
+      //   label: 'CoinMarketCap',
+      //   href: 'https://coinmarketcap.com/currencies/goose-finance/',
+      // },
+      // {
+      //   label: 'AstroTools',
+      //   href: 'https://app.astrotools.io/pancake-pair-explorer/0x19e7cbecdd23a16dfa5573df54d98f7caae03019',
+      // },
     ]
   },
   {
@@ -68,15 +83,15 @@ const config: MenuEntry[] = [
       // },
       {
         label: "Github",
-        href: "https://github.com/goosedefi/",
+        href: "https://github.com/KittySwap-Finance",
       },
       {
         label: "Docs",
-        href: "https://goosedefi.gitbook.io/goose-finance/",
+        href: "https://kittyswap.gitbook.io/kittyswap/",
       },
       {
         label: "Blog",
-        href: "https://goosefinance.medium.com/",
+        href: "https://kittyswap.medium.com/",
       },
     ],
   }

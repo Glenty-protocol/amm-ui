@@ -11,9 +11,9 @@
   "keywords": ["pancake", "default"],
   "tokens": [
     {
-      "name": "Kitty Golden Kitty",
-      "symbol": "KITTY",
-      "address": "0xF952Fc3ca7325Cc27D15885d37117676d25BfdA6",
+      "name": "bears.finance deflationary token",
+      "symbol": "BEAR",
+      "address": "0x580f500cc7da45b7b058de7df325f6d8f83065e1",
       "chainId": 56,
       "decimals": 18
     },
