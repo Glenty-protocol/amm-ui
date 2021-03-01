@@ -12,7 +12,7 @@
   "tokens": [
     {
       "name": "bears.finance deflationary token",
-      "symbol": "BEAR",
+      "symbol": "KITTY",
       "address": "0x580f500cc7da45b7b058de7df325f6d8f83065e1",
       "chainId": 56,
       "decimals": 18
