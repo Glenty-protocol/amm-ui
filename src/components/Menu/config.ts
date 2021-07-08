@@ -9,7 +9,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'http://kittyswap.finance',
+    href: 'http://glenty.com',
   },
   {
     label: 'Trade',
@@ -29,72 +29,59 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'http://kittyswap.finance/farms',
+    href: 'http://glenty.com/farms',
   },
   {
-    label: 'Pools',
+    label: 'Gigapool',
     icon: 'PoolIcon',
-    href: 'http://kittyswap.finance/pools',
-  },
-  {
-    label: 'Lottery (soon)',
-    icon: 'TicketIcon',
-    href: '#',
-  },
-  {
-    label: 'Catsino Games (soon)',
-    icon: 'IfoIcon',
-    href: '#',
+    href: 'http://glenty.com/pools',
   },
   // {
   //   label: 'Lottery',
   //   icon: 'TicketIcon',
   //   href: 'https://testing.bears.finance/lottery'
   // },
+  // {
+  //   label: 'Info',
+  //   icon: 'InfoIcon',
+  //   items: [
+  //     {
+  //       label: 'PancakeSwap',
+  //       href: 'https://pancakeswap.info/token/0x27162118C8690E30B584EC759E1Aa52AfDab4488',
+  //     },
+  //     // {
+  //     //   label: 'GitHub',
+  //     //   href: 'https://github.com/BEAR-finance',
+  //     // },
+  //     // {
+  //     //   label: 'CoinMarketCap',
+  //     //   href: 'https://coinmarketcap.com/currencies/goose-finance/',
+  //     // },
+  //     // {
+  //     //   label: 'AstroTools',
+  //     //   href: 'https://app.astrotools.io/pancake-pair-explorer/0x19e7cbecdd23a16dfa5573df54d98f7caae03019',
+  //     // },
+  //   ]
+  // },
+  // {
+  //   label: 'More',
+  //   icon: 'MoreIcon',
+  //   items: [
+  //     // {
+  //     //   label: 'Voting',
+  //     //   href: 'https://voting.pancakeswap.finance',
+  //     // },
   {
-    label: 'Info',
-    icon: 'InfoIcon',
-    items: [
-      {
-        label: 'PancakeSwap',
-        href: 'https://pancakeswap.info/token/0x27162118C8690E30B584EC759E1Aa52AfDab4488',
-      },
-      // {
-      //   label: 'GitHub',
-      //   href: 'https://github.com/BEAR-finance',
-      // },
-      // {
-      //   label: 'CoinMarketCap',
-      //   href: 'https://coinmarketcap.com/currencies/goose-finance/',
-      // },
-      // {
-      //   label: 'AstroTools',
-      //   href: 'https://app.astrotools.io/pancake-pair-explorer/0x19e7cbecdd23a16dfa5573df54d98f7caae03019',
-      // },
-    ]
+    label: "Github",
+    href: "https://github.com/glenty-protocol",
+    icon: 'AuditIcon'
   },
   {
-    label: 'More',
-    icon: 'MoreIcon',
-    items: [
-      // {
-      //   label: 'Voting',
-      //   href: 'https://voting.pancakeswap.finance',
-      // },
-      {
-        label: "Github",
-        href: "https://github.com/KittySwap-Finance",
-      },
-      {
-        label: "Docs",
-        href: "https://kittyswap.gitbook.io/kittyswap/",
-      },
-      {
-        label: "Blog",
-        href: "https://kittyswap.medium.com/",
-      },
-    ],
+    label: "Docs",
+    href: "https://glenty.gitbook.io/glenty/",
+    icon: 'TicketIcon'
   }
+
 ]
 
 export default config
