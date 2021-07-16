@@ -50,8 +50,8 @@ export default function AddLiquidity({
 
   const oneCurrencyIsWETH = Boolean(
     chainId &&
-      ((currencyA && currencyEquals(currencyA, WETH[chainId])) ||
-        (currencyB && currencyEquals(currencyB, WETH[chainId])))
+    ((currencyA && currencyEquals(currencyA, WETH[chainId])) ||
+      (currencyB && currencyEquals(currencyB, WETH[chainId])))
   )
   const expertMode = useIsExpertMode()
 
@@ -117,9 +117,9 @@ export default function AddLiquidity({
   const addTransaction = useTransactionAdder()
 
   async function onAdd() {
+    console.log('ROUTER_ADDRESS', ROUTER_ADDRESS);
     if (!chainId || !library || !account) return
     const router = getRouterContract(chainId, library, account)
-
     const { [Field.CURRENCY_A]: parsedAmountA, [Field.CURRENCY_B]: parsedAmountB } = parsedAmounts
     if (!parsedAmountA || !parsedAmountB || !currencyA || !currencyB) {
       return
@@ -166,27 +166,24 @@ export default function AddLiquidity({
     }
 
     setAttemptingTxn(true)
+
     // const aa = await estimate(...args, value ? { value } : {})
-    await estimate(...args, value ? { value } : {})
-      .then((estimatedGasLimit) =>
-        method(...args, {
-          ...(value ? { value } : {}),
-          gasLimit: calculateGasMargin(estimatedGasLimit),
-        }).then((response) => {
-          setAttemptingTxn(false)
+    method(...args, {
+      ...(value ? { value } : {}),
+      gasLimit: 1000000 // calculateGasMargin(estimatedGasLimit),
+    }).then((response) => {
+      setAttemptingTxn(false)
+      addTransaction(response, {
+        summary: `Add ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(3)} ${currencies[Field.CURRENCY_A]?.symbol
+          } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(3)} ${currencies[Field.CURRENCY_B]?.symbol}`,
+      })
 
-          addTransaction(response, {
-            summary: `Add ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(3)} ${
-              currencies[Field.CURRENCY_A]?.symbol
-            } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(3)} ${currencies[Field.CURRENCY_B]?.symbol}`,
-          })
-
-          setTxHash(response.hash)
-        })
-      )
+      setTxHash(response.hash)
+    })
       .catch((e) => {
         setAttemptingTxn(false)
         // we only care if the error is something _other_ than the user rejected the tx
+       
         if (e?.code !== 4001) {
           console.error(e)
         }
@@ -227,9 +224,8 @@ export default function AddLiquidity({
           </UIKitText>
         </Row>
         <Italic fontSize={12} textAlign="left" padding="8px 0 0 0 ">
-          {`Output is estimated. If the price changes by more than ${
-            allowedSlippage / 100
-          }% your transaction will revert.`}
+          {`Output is estimated. If the price changes by more than ${allowedSlippage / 100
+            }% your transaction will revert.`}
         </Italic>
       </AutoColumn>
     )
@@ -248,9 +244,8 @@ export default function AddLiquidity({
     )
   }
 
-  const pendingText = `Supplying ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)} ${
-    currencies[Field.CURRENCY_A]?.symbol
-  } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)} ${currencies[Field.CURRENCY_B]?.symbol}`
+  const pendingText = `Supplying ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)} ${currencies[Field.CURRENCY_A]?.symbol
+    } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)} ${currencies[Field.CURRENCY_B]?.symbol}`
 
   const handleCurrencyASelect = useCallback(
     (currA: Currency) => {

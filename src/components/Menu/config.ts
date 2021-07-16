@@ -34,7 +34,7 @@ const config: MenuEntry[] = [
   {
     label: 'Gigapool',
     icon: 'PoolIcon',
-    href: 'http://glenty.com/pools',
+    href: 'http://gigapool.glenty.com/pools',
   },
   // {
   //   label: 'Lottery',
@@ -46,8 +46,8 @@ const config: MenuEntry[] = [
   //   icon: 'InfoIcon',
   //   items: [
   //     {
-  //       label: 'PancakeSwap',
-  //       href: 'https://pancakeswap.info/token/0x27162118C8690E30B584EC759E1Aa52AfDab4488',
+  //       label: 'TOP100Swap',
+  //       href: 'https://pancakeswap.info/token/0x862793a2ba5708570C262972b76473Cd5786F349',
   //     },
   //     // {
   //     //   label: 'GitHub',

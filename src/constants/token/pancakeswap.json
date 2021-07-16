@@ -11,9 +11,9 @@
   "keywords": ["pancake", "default"],
   "tokens": [
     {
-      "name": "bears.finance deflationary token",
-      "symbol": "KITTY",
-      "address": "0x27162118C8690E30B584EC759E1Aa52AfDab4488",
+      "name": "GLENTY governance token",
+      "symbol": "GLENTY",
+      "address": "0x862793a2ba5708570C262972b76473Cd5786F349",
       "chainId": 56,
       "decimals": 18
     },
@@ -49,9 +49,9 @@
       "logoURI": "/images/coins/BTC.png"
     },
     {
-      "name": "Bakery Token",
-      "symbol": "BAKE",
-      "address": "0xe02df9e3e622debdd69fb838bb799e3f168902c5",
+      "name": "TOP100",
+      "symbol": "100",
+      "address": "0xa8a4df11e38c6ef79f65f22fa0a8ae0cc267637b",
       "chainId": 56,
       "decimals": 18,
       "logoURI": "/images/coins/bake.png"
