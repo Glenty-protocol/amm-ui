@@ -60,7 +60,7 @@ export default function Pool() {
   const hasV1Liquidity = useUserHasLiquidityInAllTokens()
 
   return (
-    <>
+    <div id='liquid'>
       <CardNav activeIndex={1} />
       <AppBody>
         <PageHeader title="Liquidity" description="Add liquidity to receive LP tokens">
@@ -126,6 +126,6 @@ export default function Pool() {
           </CardBody>
         </AutoColumn>
       </AppBody>
-    </>
+    </div>
   )
 }

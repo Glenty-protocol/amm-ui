@@ -6,7 +6,7 @@ const config: MenuEntry[] = [
   //   icon: 'HomeIcon',
   //   href: 'https://bears.finance/'
   // },
-  {
+ /* {
     label: 'Home',
     icon: 'HomeIcon',
     href: 'http://glenty.com',
@@ -35,7 +35,7 @@ const config: MenuEntry[] = [
     label: 'Gigapool',
     icon: 'PoolIcon',
     href: 'http://gigapool.glenty.com/pools',
-  },
+  }, */
   // {
   //   label: 'Lottery',
   //   icon: 'TicketIcon',
@@ -71,7 +71,7 @@ const config: MenuEntry[] = [
   //     //   label: 'Voting',
   //     //   href: 'https://voting.pancakeswap.finance',
   //     // },
-  {
+  /* {
     label: "Github",
     href: "https://github.com/glenty-protocol",
     icon: 'AuditIcon'
@@ -80,7 +80,7 @@ const config: MenuEntry[] = [
     label: "Docs",
     href: "https://glenty.gitbook.io/glenty/",
     icon: 'TicketIcon'
-  }
+  } */
 
 ]
 
