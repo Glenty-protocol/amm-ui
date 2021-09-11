@@ -4,6 +4,7 @@ window.onload=()=>{
 
 }
 // global 
+
 function clickSwapPc(){
   document.querySelector('#swap-page div').style.backgroundColor='#788cff';
   document.querySelectorAll('#swap-page div')[4].style.backgroundColor='#312783';
@@ -118,8 +119,8 @@ function swap(){
    homel.setAttribute("href", "/")
    linkl1.setAttribute("href", "https://exchange.glenty.com/#/swap")
    linkl2.setAttribute("href", "https://exchange.glenty.com/#/pool")
-   farmsl.setAttribute("href", "/farms")
-   gigapooll.setAttribute("href", "/gigapool")
+   farmsl.setAttribute("href", "https://glenty.com/farms")
+   gigapooll.setAttribute("href", "https://giga.glenty.com/")
    githubl.setAttribute("href", "https://github.com/glenty-protocol")
    docsl.setAttribute("href", "https://glenty.gitbook.io/glenty/")
 
@@ -288,9 +289,16 @@ function liquidMob(){
     document.querySelector('#root').style.backgroundSize='cover';
     document.querySelector('nav').style.backgroundColor='transparent';
     document.querySelector('nav').style.borderBottom='0';
-    document.querySelector('button').remove();
-    document.querySelectorAll('nav svg')[0].style.width='120px';
-document.querySelector('#swap-page')?clickSwapMobile():false
+    function price(){
+      setTimeout(document.querySelector('nav button').click(),2000);
+      document.querySelector('.price')?setTimeout(document.querySelector('#root').appendChild(document.querySelector('.price')), 3000):false
+      setTimeout(document.querySelector('nav button').click(), 3500);
+      setTimeout(  document.querySelector('nav button').remove(), 3700);
+    }
+    
+    price();
+  document.querySelectorAll('nav svg')[0].style.width='120px';
+  document.querySelector('#swap-page')?clickSwapMobile():false
 
    setInterval(function(){
     document.querySelector('#swap-page')?clickLiquidMob():false
@@ -465,7 +473,14 @@ function swapMob(){
     document.querySelector('#root').style.backgroundSize='cover';
     document.querySelector('nav').style.backgroundColor='transparent';
     document.querySelector('nav').style.borderBottom='0';
-    document.querySelector('button').remove();
+    function price(){
+      setTimeout(document.querySelector('nav button').click(),2000);
+      document.querySelector('.price')?setTimeout(document.querySelector('#root').appendChild(document.querySelector('.price')), 3000):false
+      setTimeout(document.querySelector('nav button').click(), 3500);
+      setTimeout(  document.querySelector('nav button').remove(), 3700);
+    }
+    
+    price();
     document.querySelectorAll('nav svg')[0].style.width='120px';
 document.querySelector('#swap-page')?clickSwapMobile():false
 
@@ -504,9 +519,9 @@ document.querySelector('#swap-page')?clickSwapMobile():false
     gigapoolM.classList.add('footerLinks');
   
   
-    TradeM.setAttribute('href','/trade');
-    Top100M.setAttribute('href','/top100');
-    gigapoolM.setAttribute('href','/gigapool');
+    TradeM.setAttribute('href','https://exchange.glenty.com/#/swap');
+    Top100M.setAttribute('href','https://glenty.com/top100');
+    gigapoolM.setAttribute('href','https://giga.glenty.com/');
   
   
     const tradeImg = document.createElement('img');
@@ -579,8 +594,8 @@ document.querySelector('#swap-page')?clickSwapMobile():false
   
     githubM.setAttribute('href','https://github.com/glenty-protocol');
     docsM.setAttribute('href','https://glenty.gitbook.io/glenty/');
-    ipoM.setAttribute('href','/ico');
-    FarmsM.setAttribute('href','/farms');
+    ipoM.setAttribute('href','https://glenty.com/ico');
+    FarmsM.setAttribute('href','https://glenty.com/farms');
   
   
     const githubImg = document.createElement('img');
