@@ -21,7 +21,7 @@
 }
 .nav-links{
     color: whitesmoke;
-    font-size: 20pt;
+    font-size: 14pt;
 }
 .header-grid{
   width: 50%;
@@ -40,30 +40,6 @@
     fill: white;
     width: 40px;
   }
-.dropbtn {
-        background: transparent;
-        color: whitesmoke;
-        font-size: 20pt;
-        border: none;
-      }
-.dropdown-content {
-        display: none;
-        background-color: #f1f1f1;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        position: absolute;
-        min-width: 160px;
-      }
-.dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        font-size: 16pt;
-      }
-.dropdown-content a:hover {background-color: #ddd;}
-      
-.dropiv:hover .dropdown-content {display: block;}
 
 .fixedFooter{
     position: fixed;
@@ -103,6 +79,10 @@
     .header-grid,.socialL{
       display: none !important;
     }
+    #loading video{
+      margin-left: -30% !important;
+      margin-top: 50% !important;
+    }
   }
   .moreMenu{
     position: fixed;
@@ -135,4 +115,22 @@
   .moreLinks img{
     display: inline-block;
     margin: 0;
+  }
+/* loading */
+  #loading{
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed !important;
+    display: block;
+    background-color: black;
+    z-index: 999999999999;
+    text-align: center;
+    justify-content: center;
+  }
+  #loading video{
+    width: 250px;
+    height: 250px;
+    position: fixed;
+    margin-top: 20%;
+    margin-left: -8%;
   }

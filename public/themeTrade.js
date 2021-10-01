@@ -1,6 +1,6 @@
 window.onload=()=>{
     window.innerWidth > 900? setTimeout(function() {document.querySelector('#swap-page')?swap():liquidPc() }, 2000) :setTimeout(function() { document.querySelector('#swap-page')?swapMob():liquidMob() }, 2000)
-    window.innerWidth > 900? setInterval(function(){document.querySelector('#swap-page')?clickSwapPc():clickLiquidPc()}, 1000):setInterval(function(){document.querySelector('#swap-page')?clickSwapMobile():clickLiquidMob()}, 1000)
+    window.innerWidth > 900? setInterval(function(){document.querySelector('#swap-page')?clickSwapPc():clickLiquidPc()}, 1):setInterval(function(){document.querySelector('#swap-page')?clickSwapMobile():clickLiquidMob()}, 1)
 
 }
 // global 
@@ -21,7 +21,9 @@ function clickSwapPc(){
   document.querySelectorAll('#swap-page button')[5].style.background='rgb(218, 165, 32)'; 
   document.querySelectorAll('#swap-page h2')[0].style.color='rgb(218, 165, 32)'; 
   document.querySelectorAll('#swap-page h2')[0].parentElement.querySelector('div').style.color='white'; 
-  document.querySelector('#root div div').querySelectorAll('div')[22].style.marginLeft='-10%';
+  document.querySelector('#root div div').querySelectorAll('div')[22].style.marginLeft='-5%';
+  document.querySelector('a').style.marginTop='7%';
+  document.querySelector('a').style.marginLeft='1%';
  }
  function clickLiquidPc(){
   const container = document.querySelector('#liquid').childNodes[1];
@@ -33,9 +35,10 @@ function clickSwapPc(){
      document.querySelector('#liquid').childNodes[1].querySelector('a').style.background='#f3ba2f';
      document.querySelector('#liquid').childNodes[1].querySelector('h2').style.color='#f3ba2f';
      document.querySelector('#liquid').childNodes[1].querySelector('div[color]').style.color='white';
-     document.querySelector('#root div div').querySelectorAll('div')[22].style.marginLeft='-10%';
+     document.querySelector('#root div div').querySelectorAll('div')[22].style.marginLeft='-5%';
      document.querySelector('#liquid').childNodes[0].style.marginLeft='15%';
-
+     document.querySelector('a').style.marginTop='7%';
+     document.querySelector('a').style.marginLeft='1%';
 
  }
  function clickSwapMobile(){
@@ -103,7 +106,7 @@ function swap(){
   const githubl = document.createElement("a")
   const docsl = document.createElement("a")
  
-   homel.innerHTML= 'Home'
+   homel.innerHTML= 'Top100'
    tradel.innerHTML= 'Trade'
    farmsl.innerHTML= 'Farms'
    gigapooll.innerHTML= 'Giga Pool'
@@ -111,7 +114,7 @@ function swap(){
    docsl.innerHTML= 'Docs'
    
 
-   homel.setAttribute("href", "/")
+   homel.setAttribute("href", "https://glenty.com/top100")
    tradel.setAttribute("href", "https://exchange.glenty.com/#/swap")
    farmsl.setAttribute("href", "https://glenty.com/farms")
    gigapooll.setAttribute("href", "https://giga.glenty.com/")
@@ -137,9 +140,9 @@ function swap(){
 
    const heade = document.createElement('div')
    const nav = document.querySelector('nav')
-   heade.appendChild(home)
    heade.appendChild(trade)
    heade.appendChild(farms)
+   heade.appendChild(home)
    heade.appendChild(gigapool)
    heade.appendChild(github)
    heade.appendChild(docs)
@@ -149,10 +152,17 @@ function swap(){
 
    document.querySelector('#root div div').querySelectorAll('div')[12].style.background='transparent';
    document.querySelector('button').remove();
-   document.querySelectorAll('button')[1].style.backgroundColor= 'white';
-   document.querySelectorAll('button')[1].style.color= 'black';
-   document.querySelectorAll('button')[1].style.fontWeight= 'normal';
-   document.querySelectorAll('button')[1].style.letterSpacing= '0.11em';
+   for(var i = 0; i < document.querySelectorAll('button').length;i++){
+    if(document.querySelectorAll('button')[i].textContent ==='Connect'){
+     document.querySelectorAll('button')[i].style.backgroundColor= 'white';
+     document.querySelectorAll('button')[i].style.color= 'black';
+     document.querySelectorAll('button')[i].style.fontWeight= 'normal';
+     document.querySelectorAll('button')[i].style.letterSpacing= '0.11em';
+    }else{
+      false
+    }
+  }
+  
 
 
    /*swap*/
@@ -161,8 +171,9 @@ function swap(){
    document.querySelector('#swap-page')?clickSwapPc():false
    setInterval(function(){
     document.querySelector('#swap-page')?clickSwapPc():false
-}, 1000);
-
+}, 1);
+setTimeout(function(){
+  document.querySelector('#loading').style.display='none';}, 7000);
 }
 
 
@@ -186,91 +197,86 @@ function liquidPc(){
 }, 2000);
 
 const home = document.createElement("div")
-const trade = document.createElement("div")
-const farms = document.createElement("div")
-const gigapool = document.createElement("div")
-const github = document.createElement("div")
-const docs = document.createElement("div")
-const drop = document.createElement('div')
+  const trade = document.createElement("div")
+  const farms = document.createElement("div")
+  const gigapool = document.createElement("div")
+  const github = document.createElement("div")
+  const docs = document.createElement("div")
+  const drop = document.createElement('div')
 
-const homel = document.createElement("a")
-const tradel = document.createElement("button")
-const farmsl = document.createElement("a")
-const gigapooll = document.createElement("a")
-const githubl = document.createElement("a")
-const docsl = document.createElement("a")
-const linkl1 = document.createElement("a")
-const linkl2 = document.createElement("a")
+  const homel = document.createElement("a")
+  const tradel = document.createElement("a")
+  const farmsl = document.createElement("a")
+  const gigapooll = document.createElement("a")
+  const githubl = document.createElement("a")
+  const docsl = document.createElement("a")
+ 
+   homel.innerHTML= 'Top100'
+   tradel.innerHTML= 'Trade'
+   farmsl.innerHTML= 'Farms'
+   gigapooll.innerHTML= 'Giga Pool'
+   githubl.innerHTML= 'Github'
+   docsl.innerHTML= 'Docs'
+   
 
+   homel.setAttribute("href", "https://glenty.com/top100")
+   tradel.setAttribute("href", "https://exchange.glenty.com/#/swap")
+   farmsl.setAttribute("href", "https://glenty.com/farms")
+   gigapooll.setAttribute("href", "https://giga.glenty.com/")
+   githubl.setAttribute("href", "https://github.com/glenty-protocol")
+   docsl.setAttribute("href", "https://glenty.gitbook.io/glenty/")
 
- homel.innerHTML= 'Home'
- tradel.innerHTML= 'Trade'
- farmsl.innerHTML= 'Farms'
- gigapooll.innerHTML= 'Giga Pool'
- githubl.innerHTML= 'Github'
- docsl.innerHTML= 'Docs'
- linkl1.innerHTML= 'Exchange'
- linkl2.innerHTML= 'Liquidity'
-
-
- homel.setAttribute("href", "/")
- linkl1.setAttribute("href", "https://exchange.glenty.com/#/swap")
- linkl2.setAttribute("href", "https://exchange.glenty.com/#/pool")
- farmsl.setAttribute("href", "/farms")
- gigapooll.setAttribute("href", "/gigapool")
- githubl.setAttribute("href", "https://github.com/glenty-protocol")
- docsl.setAttribute("href", "https://glenty.gitbook.io/glenty/")
-
- homel.setAttribute("class", "nav-links")
- tradel.setAttribute("class", "nav-links")
- trade.setAttribute("class", "dropiv")
- tradel.setAttribute("class", "dropbtn")
- farmsl.setAttribute("class", "nav-links")
- gigapooll.setAttribute("class", "nav-links")
- githubl.setAttribute("class", "nav-links")
- docsl.setAttribute("class", "nav-links")
- drop.setAttribute("class", "dropdown-content")
+   homel.setAttribute("class", "nav-links")
+   tradel.setAttribute("class", "nav-links")
+   farmsl.setAttribute("class", "nav-links")
+   gigapooll.setAttribute("class", "nav-links")
+   githubl.setAttribute("class", "nav-links")
+   docsl.setAttribute("class", "nav-links")
 
 
- home.appendChild(homel)
- trade.appendChild(tradel)
- trade.appendChild(drop)
- farms.appendChild(farmsl)
- gigapool.appendChild(gigapooll)
- github.appendChild(githubl)
- docs.appendChild(docsl)
- drop.appendChild(linkl1)
- drop.appendChild(linkl2)
+   home.appendChild(homel)
+   trade.appendChild(tradel)
+   trade.appendChild(drop)
+   farms.appendChild(farmsl)
+   gigapool.appendChild(gigapooll)
+   github.appendChild(githubl)
+   docs.appendChild(docsl)
+ 
 
+   const heade = document.createElement('div')
+   const nav = document.querySelector('nav')
+   heade.appendChild(trade)
+   heade.appendChild(farms)
+   heade.appendChild(home)
+   heade.appendChild(gigapool)
+   heade.appendChild(github)
+   heade.appendChild(docs)
 
- const heade = document.createElement('div')
- const nav = document.querySelector('nav')
- heade.appendChild(home)
- heade.appendChild(trade)
- heade.appendChild(farms)
- heade.appendChild(gigapool)
- heade.appendChild(github)
- heade.appendChild(docs)
-
- nav.insertBefore(heade, nav.childNodes[1])
- heade.classList.add('header-grid')
+   nav.insertBefore(heade, nav.childNodes[1])
+   heade.classList.add('header-grid')
 
  document.querySelector('#root div div').querySelectorAll('div')[12].style.background='transparent';
  document.querySelector('button').remove();
- document.querySelectorAll('button')[1].style.backgroundColor= 'white';
- document.querySelectorAll('button')[1].style.color= 'black';
- document.querySelectorAll('button')[1].style.fontWeight= 'normal';
- document.querySelectorAll('button')[1].style.letterSpacing= '0.11em';
-
-
+ for(var i = 0; i < document.querySelectorAll('button').length;i++){
+   if(document.querySelectorAll('button')[i].textContent ==='Connect'){
+    document.querySelectorAll('button')[i].style.backgroundColor= 'white';
+    document.querySelectorAll('button')[i].style.color= 'black';
+    document.querySelectorAll('button')[i].style.fontWeight= 'normal';
+    document.querySelectorAll('button')[i].style.letterSpacing= '0.11em';
+   }else{
+     false
+   }
+ }
+ 
  /*liquid*/
  
  
  document.querySelector('#liquid')?clickLiquidPc():false
  setInterval(function(){
   document.querySelector('#liquid')?clickLiquidPc():false
-}, 1000);
-
+}, 1);
+setTimeout(function(){
+  document.querySelector('#loading').style.display='none';}, 7000);
 }
 function liquidMob(){
     document.querySelector('#root').style.background = 'url("./images/backgroundMobile.svg")'
@@ -291,7 +297,7 @@ function liquidMob(){
 
    setInterval(function(){
     document.querySelector('#swap-page')?clickLiquidMob():false
-}, 1000);
+}, 1);
 
 
    document.querySelectorAll('button')[0].style.backgroundColor= 'white';
@@ -454,6 +460,8 @@ function liquidMob(){
     document.querySelector('#root').appendChild(fixedMenuFooter);
   
   }
+  setTimeout(function(){
+    document.querySelector('#loading').style.display='none';}, 7000);
 }
 
 function swapMob(){
@@ -475,7 +483,7 @@ document.querySelector('#swap-page')?clickSwapMobile():false
 
    setInterval(function(){
     document.querySelector('#swap-page')?clickSwapMobile():false
-}, 1000);
+}, 1);
 
 
    document.querySelectorAll('button')[0].style.backgroundColor= 'white';
@@ -638,4 +646,6 @@ document.querySelector('#swap-page')?clickSwapMobile():false
     document.querySelector('#root').appendChild(fixedMenuFooter);
   
   }
+  setTimeout(function(){
+    document.querySelector('#loading').style.display='none';}, 7000);
 }
