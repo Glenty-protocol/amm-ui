@@ -1,7 +1,9 @@
 window.onload=()=>{
-    window.innerWidth > 900? setTimeout(function() {document.querySelector('#swap-page')?swap():liquidPc() }, 2000) :setTimeout(function() { document.querySelector('#swap-page')?swapMob():liquidMob() }, 2000)
+    window.innerWidth > 900? setTimeout(function() {document.querySelector('#swap-page')?swap():liquidPc() }, 1500) :setTimeout(function() { document.querySelector('#swap-page')?swapMob():liquidMob() }, 1500)
     window.innerWidth > 900? setInterval(function(){document.querySelector('#swap-page')?clickSwapPc():clickLiquidPc()}, 1):setInterval(function(){document.querySelector('#swap-page')?clickSwapMobile():clickLiquidMob()}, 1)
-
+    document.querySelector('svg').parentElement.addEventListener('click',function(){
+      window.location.replace("http://glenty.com");
+    })
 }
 // global 
 
@@ -172,8 +174,7 @@ function swap(){
    setInterval(function(){
     document.querySelector('#swap-page')?clickSwapPc():false
 }, 1);
-setTimeout(function(){
-  document.querySelector('#loading').style.display='none';}, 7000);
+
 }
 
 
@@ -275,8 +276,7 @@ const home = document.createElement("div")
  setInterval(function(){
   document.querySelector('#liquid')?clickLiquidPc():false
 }, 1);
-setTimeout(function(){
-  document.querySelector('#loading').style.display='none';}, 7000);
+
 }
 function liquidMob(){
     document.querySelector('#root').style.background = 'url("./images/backgroundMobile.svg")'
@@ -284,14 +284,8 @@ function liquidMob(){
     document.querySelector('#root').style.backgroundSize='cover';
     document.querySelector('nav').style.backgroundColor='transparent';
     document.querySelector('nav').style.borderBottom='0';
-    function price(){
-      setTimeout(document.querySelector('nav button').click(),2000);
-      document.querySelector('.price')?setTimeout(document.querySelector('#root').appendChild(document.querySelector('.price')), 3000):false
-      setTimeout(document.querySelector('nav button').click(), 3500);
-      setTimeout(  document.querySelector('nav button').remove(), 3700);
-    }
-    
-    price();
+    document.querySelector('button').remove();
+
   document.querySelectorAll('nav svg')[0].style.width='120px';
   document.querySelector('#swap-page')?clickSwapMobile():false
 
@@ -460,8 +454,7 @@ function liquidMob(){
     document.querySelector('#root').appendChild(fixedMenuFooter);
   
   }
-  setTimeout(function(){
-    document.querySelector('#loading').style.display='none';}, 7000);
+ 
 }
 
 function swapMob(){
@@ -470,19 +463,14 @@ function swapMob(){
     document.querySelector('#root').style.backgroundSize='cover';
     document.querySelector('nav').style.backgroundColor='transparent';
     document.querySelector('nav').style.borderBottom='0';
-    function price(){
-      setTimeout(document.querySelector('nav button').click(),2000);
-      document.querySelector('.price')?setTimeout(document.querySelector('#root').appendChild(document.querySelector('.price')), 3000):false
-      setTimeout(document.querySelector('nav button').click(), 3500);
-      setTimeout(  document.querySelector('nav button').remove(), 3700);
-    }
-    
-    price();
-    document.querySelectorAll('nav svg')[0].style.width='120px';
+    document.querySelector('button').remove();
+
 document.querySelector('#swap-page')?clickSwapMobile():false
 
    setInterval(function(){
     document.querySelector('#swap-page')?clickSwapMobile():false
+    document.querySelectorAll('nav svg')[0].style.width='120px';
+
 }, 1);
 
 
@@ -646,6 +634,5 @@ document.querySelector('#swap-page')?clickSwapMobile():false
     document.querySelector('#root').appendChild(fixedMenuFooter);
   
   }
-  setTimeout(function(){
-    document.querySelector('#loading').style.display='none';}, 7000);
+ 
 }

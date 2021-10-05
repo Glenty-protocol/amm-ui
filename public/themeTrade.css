@@ -79,9 +79,11 @@
     .header-grid,.socialL{
       display: none !important;
     }
-    #loading video{
+    #loading img{
       margin-left: -30% !important;
       margin-top: 50% !important;
+      -webkit-user-select: none;
+      user-select: none;
     }
   }
   .moreMenu{
@@ -127,10 +129,12 @@
     text-align: center;
     justify-content: center;
   }
-  #loading video{
+  #loading img{
     width: 250px;
     height: 250px;
     position: fixed;
     margin-top: 20%;
     margin-left: -8%;
+    -webkit-user-select: none;
+    user-select: none;
   }
