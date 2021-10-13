@@ -310,7 +310,7 @@ const Swap = () => {
             onDismiss={handleConfirmDismiss}
           />
           <PageHeader title="Exchange" description="Trade tokens in an instant" />
-          <CardBody>
+          <CardBody className='bodyofswap'>
             <AutoColumn gap="md">
               <CurrencyInputPanel
                 label={

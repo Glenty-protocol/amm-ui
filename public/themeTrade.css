@@ -1,140 +1,215 @@
 *{
-    font-family: montserrat !important;
-    box-shadow: none !important;
+  font-family: montserrat !important;
+  box-shadow: none !important;
+}
+nav{
+background: transparent !important;
 }
 #root{
-    height: 100vh;
+  height: 100vh;
+  background : url("./images/GLENTY_background.png");
+  background-position-x:center;
+  background-size:cover;
 }
+nav svg{
+  width: 310px !important;
+}
+@media only screen and (max-width:900px){
+#root{
+  background : url("./images/backgroundMobile.svg");
+  background-position-x:center;
+  background-size:cover;
+}
+nav svg{
+  width: 120px !important;
+}
+}
+
+
 .price{
-    position: absolute;
-    top: 150px;
-    left:0;
-    padding: 15px 25px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    background: url("./images/gradient_price.svg");
-    background-repeat: no-repeat;
-    }
+  position: absolute;
+  top: 150px;
+  left:0;
+  padding: 15px 25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background: url("./images/gradient_price.svg");
+  background-repeat: no-repeat;
+  }
 .price div{
-    color: white;
-    font-size: 20pt;
+  color: white;
+  font-size: 20pt;
 }
 .nav-links{
-    color: whitesmoke;
-    font-size: 14pt;
+  color: whitesmoke;
+  font-size: 14pt;
 }
 .header-grid{
-  width: 50%;
-  display: grid;
-  text-align: center;
-  align-items: center;
-  grid-template-columns: 16% 16% 16% 16% 16% 16%;
-  /*margin-right: 250px;*/
+width: 50%;
+display: grid;
+text-align: center;
+align-items: center;
+grid-template-columns: 16% 16% 16% 16% 16% 16%;
+margin-left: -8%;
+}
+.conatinerAllPc{
+  margin-left: -5% !important;
 }
 .socialL{
-    bottom: 20px;
-    right: 20px;
-    position: fixed;
-  }
-  .socialL div svg,.socialL a svg{
-    fill: white;
-    width: 40px;
-  }
+  bottom: 20px;
+  right: 20px;
+  position: fixed;
+}
+.socialL div svg,.socialL a svg{
+  fill: white;
+  width: 40px;
+}
 
 .fixedFooter{
-    position: fixed;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    background: url('./images/menu.svg');
-    height: 100px;
-    bottom: -21px;
-    background-repeat: no-repeat;
-    background-size: cover;
+  position: fixed;
+  width: 100%;
+  display: none;
+  grid-template-columns: 25% 25% 25% 25%;
+  background: url('./images/menu.svg');
+  height: 100px;
+  bottom: -21px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footerLinks{
+  display: block;
+  text-align: center;
+}
+.footerImg{
+  height: 25px;
+  width: 25px;
+  margin: 15% 0% 10% 0%;
+}
+@media only screen and (min-width:500px){
+  .footerImg{  
+    margin: 8% 0% 8% 0%;
   }
-  .footerLinks{
-    display: block;
-    text-align: center;
-  }
-  .footerImg{
-    height: 25px;
-    width: 25px;
-    margin: 15% 0% 10% 0%;
-  }
-  @media only screen and (min-width:500px){
-    .footerImg{  
-      margin: 8% 0% 8% 0%;
-    }
-  }
-  .footerLinks p{
-    font-size: 10pt;
-    font-weight: bold;
-    color: #989fac;
-  }
-  .mobile-container{
-    width: 140%;
-    margin: 0 -20%;
-  }
-  @media only screen and (max-width:900px){
-    .header-grid,.socialL{
-      display: none !important;
-    }
-    #loading img{
-      margin-left: -30% !important;
-      margin-top: 50% !important;
-      -webkit-user-select: none;
-      user-select: none;
-    }
-  }
-  .moreMenu{
-    position: fixed;
-    width: 100%;
-    background: url(./images/menu.svg);
-    bottom: 75px;
-    display: none;
-    grid-template-columns: 100%;
-    color: #989fac;
-    font-size: 10pt;
-    font-weight: bold;
-    text-align: center;
-    background-size: cover;
-  }
-  .moreLinks{
-    display: grid;
-    grid-template-columns: 15% 15%;
-    text-align: center;
-    justify-content: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    width: 80%;
-    margin: auto;
-    border-bottom: 3px solid #989fac;
-  }
-  .moreLinks p{
-    display: inline-block;
-    line-height: 1.75;
-  }
-  .moreLinks img{
-    display: inline-block;
-    margin: 0;
-  }
-/* loading */
-  #loading{
-    width: 100% !important;
-    height: 100% !important;
-    position: fixed !important;
-    display: block;
-    background-color: black;
-    z-index: 999999999999;
-    text-align: center;
-    justify-content: center;
+}
+.footerLinks p{
+  font-size: 10pt;
+  font-weight: bold;
+  color: #989fac;
+}
+.mobile-container{
+  width: 140%;
+  margin: 0 -20%;
+}
+@media only screen and (max-width:900px){
+  .header-grid,.socialL,.lang{
+    display: none !important;
   }
   #loading img{
-    width: 250px;
-    height: 250px;
-    position: fixed;
-    margin-top: 20%;
-    margin-left: -8%;
+    margin-left: -30% !important;
+    margin-top: 50% !important;
     -webkit-user-select: none;
     user-select: none;
   }
+  .fixedFooter{
+    display: grid !important;
+  }
+  .conatinerAllPc{
+    margin: auto !important;
+  }
+}
+.moreMenu{
+  position: fixed;
+  width: 100%;
+  background: url(./images/menu.svg);
+  bottom: 75px;
+  display: none;
+  grid-template-columns: 100%;
+  color: #989fac;
+  font-size: 10pt;
+  font-weight: bold;
+  text-align: center;
+  background-size: cover;
+}
+.moreLinks{
+  display: grid;
+  grid-template-columns: 15% 15%;
+  text-align: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 80%;
+  margin: auto;
+  border-bottom: 3px solid #989fac;
+}
+.moreLinks p{
+  display: inline-block;
+  line-height: 1.75;
+}
+.moreLinks img{
+  display: inline-block;
+  margin: 0;
+}
+
+
+#swap-currency-input div:first-child div:first-child{
+  display: none !important;
+}
+#swap-currency-output div:first-child div:first-child{
+  display: none;
+}
+.open-currency-select-button div{
+  display: block !important;
+}
+
+#swap-currency-input div:first-child{
+  background: #1c1951 !important;
+}
+#swap-currency-input button span div:first-child{
+  color: #f3ba2f !important;
+}
+
+#swap-currency-input button span svg:first-child{
+  fill: #f3ba2f !important;
+}
+#swap-currency-input input{
+  color: white !important;
+}
+#swap-currency-output div:first-child{
+  background: #1c1951 !important;
+}
+#swap-currency-output button span div{
+  color: #f3ba2f !important;
+}
+#swap-currency-output button span svg{
+  fill:#f3ba2f !important;
+}
+#swap-page div:first{
+  background-color: #788cff !important;
+}
+#swap-page{
+  background: #788cff !important;
+}
+#swap-page div:last-child div button:last-child[type=button]{
+  background: rgb(218, 165, 32) !important;
+}
+nav button:last-child{
+  background-color: white !important;
+  color: black !important;
+  font-weight: normal !important;
+  letter-spacing: 0.11em !important;
+}
+.bodyofswap{
+  background: rgb(49, 39, 131) !important;
+}
+button[aria-label='Toggle menu']{
+  display: none !important;
+}
+#join-pool-button{
+background: rgb(218, 165, 32) !important;
+}
+@media only screen and (max-width:1500px){
+  @media only screen and (min-width:900px){
+    .conatinerAllPc{
+      margin-left: -8% !important;
+    }
+  }
+}
