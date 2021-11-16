@@ -30,6 +30,8 @@ document.querySelectorAll('#swap-page h2')[0].parentElement.querySelector('div')
 document.querySelector('#root div div').querySelectorAll('div')[22].classList.add('conatinerAllPc');
 document.querySelector('a').style.marginTop='7%';
 document.querySelector('a').style.marginLeft='1%';
+document.querySelector('#swap-page').parentElement.style.marginRight='10%';
+document.querySelector('#swap-nav-link').parentElement.parentElement.style.marginRight='10%';
 }
 function clickLiquidPc(){
 const container = document.querySelector('#liquid').childNodes[1];
@@ -45,7 +47,6 @@ const container = document.querySelector('#liquid').childNodes[1];
    document.querySelector('#liquid').childNodes[0].style.marginLeft='15%';
    document.querySelector('a').style.marginTop='7%';
    document.querySelector('a').style.marginLeft='1%';
-
 }
 function clickSwapMobile(){
 document.querySelector('#swap-page div').style.backgroundColor='#788cff';
@@ -85,7 +86,7 @@ function swap(){
   /* document.querySelector('#root div div').querySelectorAll('div')[16].classList.add('price'); */
   setTimeout(function() {
   document.querySelector('#root div div').querySelectorAll('div')[17].classList.add('socialL');
-  document.querySelector('#root').appendChild(document.querySelector('.socialL')); 
+  document.querySelector('#root').appendChild(document.querySelector('.socialL').parentElement); 
  
   document.querySelector('#root div div').querySelectorAll('div')[17].style.background='transparent';
 }, 50);
@@ -181,7 +182,7 @@ document.querySelector('nav').style.borderBottom='0';
 /* document.querySelector('#root div div').querySelectorAll('div')[16].classList.add('price'); */
 setTimeout(function() {
 document.querySelector('#root div div').querySelectorAll('div')[17].classList.add('socialL');
-document.querySelector('#root').appendChild(document.querySelector('.socialL')); 
+document.querySelector('#root').appendChild(document.querySelector('.socialL').parentElement); 
 
 document.querySelector('#root div div').querySelectorAll('div')[17].style.background='transparent';
 }, 50);
@@ -438,7 +439,7 @@ const docsT = document.createElement('p');
 const farmT = document.createElement('p');
 
 githubT.innerText='Github';
-docsT.innerText='Docs';
+docsT.innerText='White paper';
 farmT.innerText='Farms';
 
 
@@ -502,7 +503,7 @@ function createMenuFooter(){
   const farmT = document.createElement('p');
 
   githubT.innerText='Github';
-  docsT.innerText='Docs';
+  docsT.innerText='White paper';
   farmT.innerText='Farms';
 
 
