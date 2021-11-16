@@ -24,7 +24,6 @@ document.querySelector('#swap-currency-output button span div').style.color='#f3
 document.querySelector('#swap-currency-output button span svg').style.fill='#f3ba2f';
 document.querySelector('#swap-currency-output input').style.color='white';
 document.querySelector('#swap-page div').style.borderBottom='0';
-document.querySelectorAll('#swap-page button')[5].style.background='rgb(218, 165, 32)'; 
 document.querySelectorAll('#swap-page h2')[0].style.color='rgb(218, 165, 32)'; 
 document.querySelectorAll('#swap-page h2')[0].parentElement.querySelector('div').style.color='white'; 
 document.querySelector('#root div div').querySelectorAll('div')[22].classList.add('conatinerAllPc');
@@ -61,7 +60,6 @@ document.querySelector('#swap-currency-output button span div').style.color='#f3
 document.querySelector('#swap-currency-output button span svg').style.fill='#f3ba2f';
 document.querySelector('#swap-currency-output input').style.color='white';
 document.querySelector('#swap-page div').style.borderBottom='0';
-document.querySelectorAll('#swap-page button')[5].style.background='rgb(218, 165, 32)'; 
 document.querySelectorAll('#swap-page h2')[0].style.color='rgb(218, 165, 32)'; 
 document.querySelectorAll('#swap-page h2')[0].parentElement.querySelector('div').style.color='white';
 }
