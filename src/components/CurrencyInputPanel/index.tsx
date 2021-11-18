@@ -120,16 +120,9 @@ export default function CurrencyInputPanel({
     <InputPanel id={id}>
       <Container hideInput={hideInput}>
         {!hideInput && (
-          <LabelRow>
+          <LabelRow className='removedrow'>
             <RowBetween>
               <Text fontSize="14px">{label}</Text>
-              {account && (
-                <Text onClick={onMax} fontSize="14px" style={{ display: 'inline', cursor: 'pointer' }}>
-                  {!hideBalance && !!currency && selectedCurrencyBalance
-                    ? `Balance: ${  selectedCurrencyBalance?.toSignificant(6)}`
-                    : ' -'}
-                </Text>
-              )}
             </RowBetween>
           </LabelRow>
         )}

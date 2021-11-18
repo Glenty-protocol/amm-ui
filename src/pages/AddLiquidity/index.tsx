@@ -291,6 +291,7 @@ export default function AddLiquidity({
   return (
     <>
       <CardNav activeIndex={1} />
+      <div id='addliqBody'>
       <AppBody>
         <AddRemoveTabs adding />
         <Wrapper>
@@ -309,7 +310,7 @@ export default function AddLiquidity({
             )}
             pendingText={pendingText}
           />
-          <CardBody>
+          <CardBody id='bodypanel'>
             <AutoColumn gap="20px">
               {noLiquidity && (
                 <ColumnCenter>
@@ -432,6 +433,7 @@ export default function AddLiquidity({
           </CardBody>
         </Wrapper>
       </AppBody>
+      </div>
       {pair && !noLiquidity && pairState !== PairState.INVALID ? (
         <AutoColumn style={{ minWidth: '20rem', marginTop: '1rem' }}>
           <MinimalPositionCard showUnwrapped={oneCurrencyIsWETH} pair={pair} />

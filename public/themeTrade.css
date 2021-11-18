@@ -20,6 +20,9 @@ nav svg{
   background-position-x:center;
   background-size:cover;
 }
+#addliqBody{
+  width: 100% !important;
+}
 nav svg{
   width: 120px !important;
 }
@@ -213,8 +216,36 @@ background: rgb(218, 165, 32) !important;
   #liquid{
     margin-right: 10% !important;
   }
+  #addliqBody{
+    width: 30%;
+  }
 #root{
   position: fixed;
   height: 100%;
   width: 100%;
 }}
+
+#add-liquidity-input-tokena div,#add-liquidity-input-tokena,#add-liquidity-input-tokenb,#add-liquidity-input-tokenb div{
+  background: rgb(28, 25, 81) !important;
+  border-radius: 20px;
+}
+.open-currency-select-button div[color='text'],.open-currency-select-button svg{
+  color: rgb(218, 165, 32) !important;
+  background: transparent !important;
+  fill:rgb(218, 165, 32) !important;
+}
+.removedrow{
+  display: none !important;
+}
+#addliqBody div:first-child div:first{
+  background: rgb(120, 140, 255) !important;
+}
+.buttonunlock button{
+  background: rgb(218, 165, 32) !important;
+}
+#bodypanel,#bodypanel div:first-of-type{
+  background-color: rgb(49, 39, 131) !important;
+}
+#addliqBody div:first-of-type div:first-of-type{
+  background: rgb(120, 140, 255);
+}

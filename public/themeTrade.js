@@ -107,7 +107,7 @@ const docsl = document.createElement("a")
  homel.innerHTML= 'Top100'
  tradel.innerHTML= 'Trade'
  farmsl.innerHTML= 'Farms'
- gigapooll.innerHTML= 'Giga Pool'
+ gigapooll.innerHTML= 'GigaPool'
  githubl.innerHTML= 'Github'
  docsl.innerHTML= 'Docs'
  
@@ -532,3 +532,4 @@ function createMenuFooter(){
 window.addEventListener("resize", function() {
   window.innerWidth <= 1000 ? location.reload() : false
 })
+
