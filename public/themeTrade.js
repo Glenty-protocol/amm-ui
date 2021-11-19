@@ -396,7 +396,7 @@ fixedFooter.appendChild(TradeM);
 fixedFooter.appendChild(gigapoolM);
 fixedFooter.appendChild(Top100M);
 fixedFooter.appendChild(MoreM);
-document.querySelector('#root').appendChild(fixedFooter);
+document.querySelector('body').appendChild(fixedFooter);
 }
 
 function createMenuFooter(){
@@ -533,3 +533,6 @@ window.addEventListener("resize", function() {
   window.innerWidth <= 1000 ? location.reload() : false
 })
 
+document.querySelector('#root').addEventListener('click',function(){
+  document.querySelector('.moreMenu').style.display='none'
+})
