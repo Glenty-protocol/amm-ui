@@ -397,6 +397,9 @@ fixedFooter.appendChild(gigapoolM);
 fixedFooter.appendChild(Top100M);
 fixedFooter.appendChild(MoreM);
 document.querySelector('body').appendChild(fixedFooter);
+document.querySelector('#root').addEventListener('click',function(){
+  document.querySelector('.moreMenu').style.display='none'
+})
 }
 
 function createMenuFooter(){
@@ -524,15 +527,9 @@ function createMenuFooter(){
   fixedMenuFooter.appendChild(docsM);
 
   document.querySelector('#root').appendChild(fixedMenuFooter);
-  window.addEventListener("resize", function() {
-    window.innerWidth >= 1000 ? location.reload() : false
-  })
 }
+const windowWidth = window.innerWidth
 
-window.addEventListener("resize", function() {
-  window.innerWidth <= 1000 ? location.reload() : false
-})
-
-document.querySelector('#root').addEventListener('click',function(){
-  document.querySelector('.moreMenu').style.display='none'
-})
+  window.onresize = ()=>{
+    window.innerWidth !== windowWidth ? location.reload():false
+  }
