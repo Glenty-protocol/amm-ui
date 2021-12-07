@@ -1,8 +1,7 @@
+import { _fetchData } from '@ethersproject/web'
 import { useEffect, useState } from 'react'
-import BigNumber from 'bignumber.js'
 import { useMulticallContract } from './useContract'
-import ERC20_INTERFACE from '../constants/abis/erc20'
-import priceContracts from '../constants/bearPriceContracts'
+
 
 type ApiResponse = {
   prices: {
@@ -10,43 +9,29 @@ type ApiResponse = {
   }
   update_at: string
 }
-
-/**
- * Due to Cors the api was forked and a proxy was created
- * @see https://github.com/pancakeswap/gatsby-pancake-api/commit/e811b67a43ccc41edd4a0fa1ee704b2f510aa0ba
- */
-const api = 'https://api.pancakeswap.com/api/v1/price'
-
+let gValue = 0
+let bValue = 1
+let bUsd = 1
 const useGetPriceData = () => {
   const [data, setData] = useState<number>(0)
-
   const multicallContract = useMulticallContract();
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        if(multicallContract){
-          const {cakeAddress, busdAddress, lpAddress} = priceContracts;
-          const calls = [
-            [cakeAddress, ERC20_INTERFACE.encodeFunctionData("balanceOf", [lpAddress])],
-            [busdAddress, ERC20_INTERFACE.encodeFunctionData("balanceOf", [lpAddress])],
-          ];
-
-          const [resultsBlockNumber, result] = await multicallContract.aggregate(calls);
-          const [cakeAmount, busdAmount] = result.map(r=>ERC20_INTERFACE.decodeFunctionResult("balanceOf", r));
-          const cake = new BigNumber(cakeAmount);
-          const busd = new BigNumber(busdAmount);
-          const cakePrice = busd.div(cake).toNumber();
-          setData(cakePrice)
-        }
-      } catch (error) {
-        console.error('Unable to fetch price data:', error)
-      }
+    const fetchdata=()=>{
+      fetch('https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=0x97769506e36988d08745b64e78f66e37858f14e9&address=0xfcdf033e55ca6a62300337d88da1810933a54f82&tag=latest&apikey=G9GR47NUZ9B32CHEYFQE7N99Z5V54V1SC8')
+      .then(res=>res.json())
+      .then(glenty=>{gValue=glenty.result/1000000000000000000})
+      fetch('https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c&address=0xfcdf033e55ca6a62300337d88da1810933a54f82&tag=latest&apikey=G9GR47NUZ9B32CHEYFQE7N99Z5V54V1SC8')
+      .then(res=>res.json())
+      .then(bnb=>{bValue=bnb.result/1000000000000000000})
+    fetch('https://api.coingecko.com/api/v3/simple/price?ids=binancecoin&vs_currencies=usd')
+      .then(res=>res.json())
+      .then(usd=>{bUsd=usd.binancecoin.usd})
+    
+    setData((gValue/bValue)*bUsd)  
     }
-
-    fetchData()
-  }, [multicallContract])
-
+    fetchdata();
+  },[multicallContract]);
   return data
 }
 

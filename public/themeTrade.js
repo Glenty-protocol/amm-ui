@@ -271,7 +271,13 @@ function liquidMob(){
   document.querySelector('button').remove();
 
 document.querySelector('#swap-page')?clickSwapMobile():false
-
+let phonePrice = document.createElement('div');
+  document.querySelector('nav').insertBefore(phonePrice, document.querySelector('nav').childNodes[1]);
+  document.querySelectorAll('div')[8].querySelector('button').click()
+  phonePrice.classList.add('phonePrice');
+  setTimeout(function(){
+    document.querySelector('.price')?phonePrice.innerText=document.querySelector('.price').innerText:phonePrice.style.display='none';
+  },3000)
  setInterval(function(){
   document.querySelector('#swap-page')?clickLiquidMob():false
 }, 1);
@@ -300,7 +306,13 @@ function swapMob(){
   document.querySelector('nav').style.backgroundColor='transparent';
   document.querySelector('nav').style.borderBottom='0';
   document.querySelector('button').remove();
-
+  let phonePrice = document.createElement('div');
+  document.querySelector('nav').insertBefore(phonePrice, document.querySelector('nav').childNodes[1]);
+  document.querySelectorAll('div')[8].querySelector('button').click()
+  phonePrice.classList.add('phonePrice');
+  setTimeout(function(){
+    document.querySelector('.price')?phonePrice.innerText=document.querySelector('.price').innerText:phonePrice.style.display='none';
+  },3000)
 document.querySelector('#swap-page')?clickSwapMobile():false
 
  setInterval(function(){
