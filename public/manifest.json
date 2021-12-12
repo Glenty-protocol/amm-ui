@@ -3,7 +3,7 @@
   "name": "GooseFinance",
   "icons": [
     {
-      "src": "./logo.png",
+      "src": "./favicon.ico",
       "sizes": "160x160",
       "type": "image/png",
       "purpose": "any maskable"

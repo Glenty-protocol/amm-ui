@@ -6,10 +6,10 @@ nav{
 background: transparent !important;
 }
 #root{
-  height: 100vh;
   background : url("./images/GLENTY_background.png");
   background-position-x:center;
   background-size:cover;
+  padding-bottom: 10%;
 }
 nav svg{
   width: 310px !important;
@@ -81,6 +81,7 @@ margin-left: -8%;
 
 .fixedFooter{
   position: fixed;
+  z-index: 999999;
   width: 100%;
   display: none;
   grid-template-columns: 25% 25% 25% 25%;
@@ -187,9 +188,9 @@ margin-left: -8%;
 #swap-currency-input input{
   color: white !important;
 }
-#swap-currency-output div:first-child{
+/* #swap-currency-output div:first-child{
   background: #1c1951 !important;
-}
+} */
 #swap-currency-output button span div{
   color: #f3ba2f !important;
 }
@@ -242,7 +243,12 @@ background: rgb(218, 165, 32) !important;
   position: fixed;
   height: 100%;
   width: 100%;
-}}
+}
+.moreinfo{
+  margin-right:17%;
+  margin-left:-15%;
+}
+}
 
 #add-liquidity-input-tokena div,#add-liquidity-input-tokena,#add-liquidity-input-tokenb,#add-liquidity-input-tokenb div{
   background: rgb(28, 25, 81) !important;
@@ -267,4 +273,10 @@ background: rgb(218, 165, 32) !important;
 }
 #addliqBody div:first-of-type div:first-of-type{
   background: rgb(120, 140, 255);
+}
+#bodypanel button span div[color='text']{
+  background: transparent !important;
+}
+#liquid div[style='width: 100%;'] div span:nth-child(2){
+  display: none !important;
 }

@@ -137,7 +137,7 @@ export default function CurrencyInputPanel({
                 }}
               />
               {account && currency && showMaxButton && label !== 'To' && (
-                <Button onClick={onMax} size="sm" variant="text">
+                <Button onClick={onMax} size="sm" color='lightgrey'>
                   MAX
                 </Button>
               )}

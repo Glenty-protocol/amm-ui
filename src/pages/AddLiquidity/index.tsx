@@ -316,9 +316,9 @@ export default function AddLiquidity({
                 <ColumnCenter>
                   <Pane>
                     <AutoColumn gap="12px">
-                      <UIKitText>You are the first liquidity provider.</UIKitText>
-                      <UIKitText>The ratio of tokens you add will set the price of this pool.</UIKitText>
-                      <UIKitText>Once you are happy with the rate click supply to review.</UIKitText>
+                      <UIKitText color='white'>You are the first liquidity provider.</UIKitText>
+                      <UIKitText color='white'>The ratio of tokens you add will set the price of this pool.</UIKitText>
+                      <UIKitText color='white'>Once you are happy with the rate click supply to review.</UIKitText>
                     </AutoColumn>
                   </Pane>
                 </ColumnCenter>
@@ -354,7 +354,7 @@ export default function AddLiquidity({
                 <div>
                   <UIKitText
                     style={{ textTransform: 'uppercase', fontWeight: 600 }}
-                    color="textSubtle"
+                    color="rgb(218, 165, 32)"
                     fontSize="12px"
                     mb="2px"
                   >
@@ -385,7 +385,7 @@ export default function AddLiquidity({
                           <Button
                             onClick={approveACallback}
                             disabled={approvalA === ApprovalState.PENDING}
-                            style={{ width: approvalB !== ApprovalState.APPROVED ? '48%' : '100%' }}
+                            style={{ width: approvalB !== ApprovalState.APPROVED ? '48%' : '100%' ,background:'rgb(218, 165, 32)'}}
                           >
                             {approvalA === ApprovalState.PENDING ? (
                               <Dots>Approving {currencies[Field.CURRENCY_A]?.symbol}</Dots>
