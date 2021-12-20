@@ -94,6 +94,10 @@ margin-left: -8%;
 .footerLinks{
   display: block;
   text-align: center;
+  transition: 0.4s;
+}
+.footerLinks:hover{
+  filter:brightness(200%);
 }
 .footerImg{
   height: 25px;
@@ -154,6 +158,10 @@ margin-left: -8%;
   width: 80%;
   margin: auto;
   border-bottom: 3px solid #989fac;
+  transition: 0.4s;
+}
+.moreLinks:hover{
+  filter:brightness(200%);
 }
 .moreLinks p{
   display: inline-block;
