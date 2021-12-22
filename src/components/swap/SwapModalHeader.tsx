@@ -54,13 +54,13 @@ export default function SwapModalHeader({
           <CurrencyLogo currency={trade.inputAmount.currency} size="24px" style={{ marginRight: '12px' }} />
           <Text
             fontSize="24px"
-            color={showAcceptChanges && trade.tradeType === TradeType.EXACT_OUTPUT ? theme.colors.primary : 'text'}
+            color="white"
           >
             {trade.inputAmount.toSignificant(6)}
           </Text>
         </RowFixed>
         <RowFixed gap="0px">
-          <Text fontSize="24px" style={{ marginLeft: '10px', fontWeight: 500 }}>
+          <Text fontSize="24px" style={{ marginLeft: '10px', fontWeight: 500 }} color="white">
             {trade.inputAmount.currency.symbol}
           </Text>
         </RowFixed>
@@ -74,19 +74,13 @@ export default function SwapModalHeader({
           <Text
             fontSize="24px"
             style={{ marginLeft: '10px', fontWeight: 500 }}
-            color={
-              priceImpactSeverity > 2
-                ? theme.colors.failure
-                : showAcceptChanges && trade.tradeType === TradeType.EXACT_INPUT
-                ? theme.colors.primary
-                : 'text'
-            }
+            color="white"
           >
             {trade.outputAmount.toSignificant(6)}
           </Text>
         </RowFixed>
         <RowFixed gap="0px">
-          <Text fontSize="24px" style={{ marginLeft: '10px', fontWeight: 500 }}>
+          <Text fontSize="24px" style={{ marginLeft: '10px', fontWeight: 500 }} color="white">
             {trade.outputAmount.currency.symbol}
           </Text>
         </RowFixed>
@@ -96,7 +90,7 @@ export default function SwapModalHeader({
           <RowBetween>
             <RowFixed>
               <AlertTriangle size={20} style={{ marginRight: '8px', minWidth: 24 }} />
-              <Main color={theme.colors.primary}> Price Updated</Main>
+              <Main color="white"> Price Updated</Main>
             </RowFixed>
             <Button onClick={onAcceptChanges}>Accept</Button>
           </RowBetween>
@@ -104,17 +98,17 @@ export default function SwapModalHeader({
       ) : null}
       <AutoColumn justify="flex-start" gap="sm" style={{ padding: '16px 0 0' }}>
         {trade.tradeType === TradeType.EXACT_INPUT ? (
-          <PriceInfoText>
+          <PriceInfoText color="white">
             {`Output is estimated. You will receive at least `}
-            <span>
+            <span style={{color:'white'}}>
               {slippageAdjustedAmounts[Field.OUTPUT]?.toSignificant(6)} {trade.outputAmount.currency.symbol}
             </span>
             {' or the transaction will revert.'}
           </PriceInfoText>
         ) : (
-          <PriceInfoText>
+          <PriceInfoText color="white">
             {`Input is estimated. You will sell at most `}
-            <span>
+            <span style={{color:'white'}}>
               {slippageAdjustedAmounts[Field.INPUT]?.toSignificant(6)} {trade.inputAmount.currency.symbol}
             </span>
             {' or the transaction will revert.'}
@@ -123,9 +117,9 @@ export default function SwapModalHeader({
       </AutoColumn>
       {recipient !== null ? (
         <AutoColumn justify="flex-start" gap="sm" style={{ padding: '16px 0 0' }}>
-          <Main>
+          <Main color="white">
             Output will be sent to{' '}
-            <b title={recipient}>{isAddress(recipient) ? shortenAddress(recipient) : recipient}</b>
+            <b style={{color:'white'}} title={recipient}>{isAddress(recipient) ? shortenAddress(recipient) : recipient}</b>
           </Main>
         </AutoColumn>
       ) : null}

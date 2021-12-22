@@ -443,7 +443,7 @@ const Swap = () => {
                         })
                       }
                     }}
-                    style={{ width: '48%' }}
+                    style={{ width: '48%',color:"white" }}
                     id="swap-button"
                     disabled={
                       !isValid || approval !== ApprovalState.APPROVED || (priceImpactSeverity > 3 && !isExpertMode)
@@ -488,6 +488,7 @@ const Swap = () => {
           </CardBody>
         </Wrapper>
       </AppBody>
+
       <AdvancedSwapDetailsDropdown trade={trade} />
     </>
   )

@@ -1,6 +1,5 @@
 window.onload=()=>{
-  window.innerWidth > 900? setTimeout(function() {window.location.href.includes('swap')?swap():liquidPc() }, 50) :setTimeout(function() { window.location.href.includes('swap')?swapMob():liquidMob() }, 50)
-  window.innerWidth > 900? setInterval(function(){document.querySelector('#swap-page')?clickSwapPc():clickLiquidPc()}, 1):setInterval(function(){document.querySelector('#swap-page')?clickSwapMobile():clickLiquidMob()}, 1)
+  window.innerWidth > 900? setTimeout(function() {window.location.href.includes('swap')?swap():liquidPc() }, 50) :false
    document.querySelector('a').removeAttribute('href');
 document.querySelector('a').style.cursor='pointer';
 document.querySelector('a').addEventListener('click',function(){
@@ -9,78 +8,8 @@ document.querySelector('a').addEventListener('click',function(){
 createFooter();
 createMenuFooter();
 }
-// global 
-
-function clickSwapPc(){
-document.querySelector('#swap-page div').style.backgroundColor='#788cff';
-document.querySelectorAll('#swap-page div')[4].style.backgroundColor='#312783';
-document.querySelector('#swap-currency-input div').style.background='#1c1951';
-document.querySelector('#swap-currency-input button span div').style.color='#f3ba2f';
-document.querySelector('#swap-currency-input button span svg').style.fill='#f3ba2f';
-document.querySelector('#swap-currency-input input').style.color='white';
-document.querySelector('#swap-currency-input').parentElement.style.backgroundColor='rgb(49, 39, 131)';
-document.querySelector('#swap-currency-output div').style.background='#1c1951';
-document.querySelector('#swap-currency-output button span div').style.color='#f3ba2f';
-document.querySelector('#swap-currency-output button span svg').style.fill='#f3ba2f';
-document.querySelector('#swap-currency-output input').style.color='white';
-document.querySelector('#swap-page div').style.borderBottom='0';
-document.querySelectorAll('#swap-page h2')[0].style.color='rgb(218, 165, 32)'; 
-document.querySelectorAll('#swap-page h2')[0].parentElement.querySelector('div').style.color='white'; 
-document.querySelector('#root div div').querySelectorAll('div')[22].classList.add('conatinerAllPc');
-document.querySelector('a').style.marginTop='7%';
-document.querySelector('a').style.marginLeft='1%';
-document.querySelector('#swap-page').parentElement.style.marginRight='10%';
-document.querySelector('#swap-nav-link').parentElement.parentElement.style.marginRight='10%';
-}
-function clickLiquidPc(){
-const container = document.querySelector('#liquid').childNodes[1];
-   container.childNodes[0].style.background='#788cff';
-   container.childNodes[0].style.borderBottom='0';
-   container.childNodes[1].style.background='#312783';
-   document.querySelector('#liquid').childNodes[1].childNodes[1].childNodes[0].childNodes[0].childNodes[1].style.background='#1c1951';
-   document.querySelector('#liquid').childNodes[1].childNodes[1].childNodes[0].childNodes[0].childNodes[1].style.border='0';
-   document.querySelector('#liquid').childNodes[1].querySelector('a').style.background='#f3ba2f';
-   document.querySelector('#liquid').childNodes[1].querySelector('h2').style.color='#f3ba2f';
-   document.querySelector('#liquid').childNodes[1].querySelector('div[color]').style.color='white';
-   document.querySelector('#root div div').querySelectorAll('div')[22].classList.add('conatinerAllPc');
-   document.querySelector('#liquid').childNodes[0].style.marginLeft='15%';
-   document.querySelector('a').style.marginTop='7%';
-   document.querySelector('a').style.marginLeft='1%';
-}
-function clickSwapMobile(){
-document.querySelector('#swap-page div').style.backgroundColor='#788cff';
-document.querySelectorAll('#swap-page div')[4].style.backgroundColor='#312783';
-document.querySelector('#swap-currency-input div').style.background='#1c1951';
-document.querySelector('#swap-currency-input button span div').style.color='#f3ba2f';
-document.querySelector('#swap-currency-input button span svg').style.fill='#f3ba2f';
-document.querySelector('#swap-currency-input input').style.color='white';
-
-document.querySelector('#swap-currency-output div').style.background='#1c1951';
-document.querySelector('#swap-currency-output button span div').style.color='#f3ba2f';
-document.querySelector('#swap-currency-output button span svg').style.fill='#f3ba2f';
-document.querySelector('#swap-currency-output input').style.color='white';
-document.querySelector('#swap-page div').style.borderBottom='0';
-document.querySelectorAll('#swap-page h2')[0].style.color='rgb(218, 165, 32)'; 
-document.querySelectorAll('#swap-page h2')[0].parentElement.querySelector('div').style.color='white';
-}
-function clickLiquidMob(){
-const container = document.querySelector('#liquid').childNodes[1];
-   container.childNodes[0].style.background='#788cff';
-   container.childNodes[0].style.borderBottom='0';
-   container.childNodes[1].style.background='#312783';
-   document.querySelector('#liquid').childNodes[1].childNodes[1].childNodes[0].childNodes[0].childNodes[1].style.background='#1c1951';
-   document.querySelector('#liquid').childNodes[1].childNodes[1].childNodes[0].childNodes[0].childNodes[1].style.border='0';
-   document.querySelector('#liquid').childNodes[1].querySelector('a').style.background='#f3ba2f';
-   document.querySelector('#liquid').childNodes[1].querySelector('h2').style.color='#f3ba2f';
-   document.querySelector('#liquid').childNodes[1].querySelector('div[color]').style.color='white';
-   document.querySelector('#liquid').childNodes[0].style.textAlign='center';
-
-}
 //global finished
-function swap(){
-  document.querySelector('nav').style.backgroundColor='transparent';
-  document.querySelector('nav').style.borderBottom='0';
-  
+function swap(){  
   /* document.querySelector('#root div div').querySelectorAll('div')[16].classList.add('price'); */
   setTimeout(function() {
   document.querySelector('#root div div').querySelectorAll('div')[17].classList.add('socialL');
@@ -149,35 +78,12 @@ const docsl = document.createElement("a")
  heade.classList.add('header-grid')
 
  document.querySelector('#root div div').querySelectorAll('div')[12].style.background='transparent';
- for(var i = 0; i < document.querySelectorAll('button').length;i++){
-  if(document.querySelectorAll('button')[i].textContent ==='Connect'){
-   document.querySelectorAll('button')[i].style.backgroundColor= 'white';
-   document.querySelectorAll('button')[i].style.color= 'black';
-   document.querySelectorAll('button')[i].style.fontWeight= 'normal';
-   document.querySelectorAll('button')[i].style.letterSpacing= '0.11em';
-  }else{
-    false
-  }
-}
-
-
-
- /*swap*/
- 
- 
- document.querySelector('#swap-page')?clickSwapPc():false
- setInterval(function(){
-  document.querySelector('#swap-page')?clickSwapPc():false
-}, 1);
 
 }
 
 
 function liquidPc(){
-document.querySelector('nav').style.backgroundColor='transparent';
-document.querySelector('nav').style.borderBottom='0';
 
-/* document.querySelector('#root div div').querySelectorAll('div')[16].classList.add('price'); */
 setTimeout(function() {
 document.querySelector('#root div div').querySelectorAll('div')[17].classList.add('socialL');
 document.querySelector('#root').appendChild(document.querySelector('.socialL').parentElement); 
@@ -245,26 +151,6 @@ const docsl = document.createElement("a")
  heade.classList.add('header-grid')
 
 document.querySelector('#root div div').querySelectorAll('div')[12].style.background='transparent';
-document.querySelector('button').remove();
-for(var i = 0; i < document.querySelectorAll('button').length;i++){
- if(document.querySelectorAll('button')[i].textContent ==='Connect'){
-  document.querySelectorAll('button')[i].style.backgroundColor= 'white';
-  document.querySelectorAll('button')[i].style.color= 'black';
-  document.querySelectorAll('button')[i].style.fontWeight= 'normal';
-  document.querySelectorAll('button')[i].style.letterSpacing= '0.11em';
- }else{
-   false
- }
-}
-
-/*liquid*/
-
-
-document.querySelector('#liquid')?clickLiquidPc():false
-setInterval(function(){
-document.querySelector('#liquid')?clickLiquidPc():false
-}, 1);
-
 }
 function liquidMob(){   
   document.querySelector('nav').style.borderBottom='0';
@@ -278,15 +164,6 @@ let phonePrice = document.createElement('div');
   setInterval(function(){
     document.querySelector('.price')?phonePrice.innerText=document.querySelector('.price').innerText:false;
   },3000)
- setInterval(function(){
-  document.querySelector('#swap-page')?clickLiquidMob():false
-}, 1);
-
-
- document.querySelectorAll('button')[0].style.backgroundColor= 'white';
- document.querySelectorAll('button')[0].style.color= 'black';
- document.querySelectorAll('button')[0].style.fontWeight= 'normal';
- document.querySelectorAll('button')[0].style.letterSpacing= '0.11em';
 
 
 /*footer */
@@ -315,18 +192,6 @@ function swapMob(){
   },3000)
 document.querySelector('#swap-page')?clickSwapMobile():false
 
- setInterval(function(){
-  document.querySelector('#swap-page')?clickSwapMobile():false
-
-}, 1);
-
-
- document.querySelectorAll('button')[0].style.backgroundColor= 'white';
- document.querySelectorAll('button')[0].style.color= 'black';
- document.querySelectorAll('button')[0].style.fontWeight= 'normal';
- document.querySelectorAll('button')[0].style.letterSpacing= '0.11em';
-
-
 /*footer */
 document.querySelectorAll('.footerLinks')[3].addEventListener('click',function(){
  document.querySelector('.moreMenu').style.display === "grid"? 
@@ -350,6 +215,7 @@ const Top100M = document.createElement('a');
 const MoreM = document.createElement('a');
 
 TradeM.classList.add('footerLinks');
+TradeM.classList.add('activeFooter');
 Top100M.classList.add('footerLinks');
 MoreM.classList.add('footerLinks');
 gigapoolM.classList.add('footerLinks');

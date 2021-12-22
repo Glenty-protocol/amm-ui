@@ -4,6 +4,7 @@
 }
 nav{
 background: transparent !important;
+border-bottom: 0 !important;
 }
 #root{
   background : url("./images/GLENTY_background.png");
@@ -96,7 +97,7 @@ margin-left: -8%;
   text-align: center;
   transition: 0.4s;
 }
-.footerLinks:hover{
+.activeFooter, .footerLinks:hover{
   filter:brightness(200%);
 }
 .footerImg{
@@ -121,6 +122,10 @@ margin-left: -8%;
 @media only screen and (max-width:900px){
   .header-grid,.socialL,.lang{
     display: none !important;
+  }
+  div[role="dialog"]{
+    margin-bottom: 25% !important;
+    border: 0 !important;
   }
   #loading img{
     margin-left: -30% !important;
@@ -172,12 +177,20 @@ margin-left: -8%;
   margin: 0;
 }
 
-
 #swap-currency-input div:first-child div:first-child{
   display: none !important;
 }
 #swap-currency-output div:first-child div:first-child{
   display: none;
+}
+#swap-currency-output div:first-of-type{
+  background: #1c1951 !important;
+}
+#swap-page h2,.liquidHeader h2{
+  color: #f3ba2f !important;
+}
+#swap-page div[color="textSubtle"],.liquidHeader div[color="textSubtle"]{
+  color: white !important;
 }
 .open-currency-select-button div{
   display: block !important;
@@ -212,7 +225,7 @@ margin-left: -8%;
   background: #788cff !important;
 }
 #swap-page div:last-child div button:last-child[type=button]{
-  background: rgb(218, 165, 32) !important;
+  background: rgb(157 115 9) !important;
 }
 nav button:last-child{
   background-color: white !important;
@@ -229,6 +242,7 @@ button[aria-label='Toggle menu']{
 #join-pool-button{
 background: rgb(218, 165, 32) !important;
 }
+
 @media only screen and (max-width:1500px){
   @media only screen and (min-width:900px){
     .conatinerAllPc{

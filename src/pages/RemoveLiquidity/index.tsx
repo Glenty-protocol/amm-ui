@@ -43,7 +43,7 @@ import { useUserDeadline, useUserSlippageTolerance } from '../../state/user/hook
 const { italic: Italic } = TYPE
 
 const OutlineCard = styled.div`
-  border: 1px solid ${({ theme }) => theme.colors.borderColor};
+  background:#1c1951;
   border-radius: 16px;
   padding: 24px;
 `
@@ -444,7 +444,7 @@ export default function RemoveLiquidity({
   )
 
   return (
-    <>
+    <div id='removeLiq'>
       <AppBody>
         <AddRemoveTabs adding={false} />
         <Wrapper>
@@ -463,12 +463,13 @@ export default function RemoveLiquidity({
             )}
             pendingText={pendingText}
           />
-          <AutoColumn gap="md">
+          <AutoColumn gap="md" style={{background:'rgb(49, 39, 131)'}}>
             <Body>
+            <br />
               <OutlineCard>
                 <AutoColumn>
                   <RowBetween>
-                    <Text>Amount</Text>
+                    <Text color='rgb(218, 165, 32)'>Amount</Text>
                     <ClickableText
                       onClick={() => {
                         setShowDetailed(!showDetailed)
@@ -478,7 +479,7 @@ export default function RemoveLiquidity({
                     </ClickableText>
                   </RowBetween>
                   <Flex justifyContent="start">
-                    <Text fontSize="64px">{formattedAmounts[Field.LIQUIDITY_PERCENT]}%</Text>
+                    <Text fontSize="64px" color='white'>{formattedAmounts[Field.LIQUIDITY_PERCENT]}%</Text>
                   </Flex>
                   {!showDetailed && (
                     <>
@@ -486,17 +487,17 @@ export default function RemoveLiquidity({
                         <Slider value={innerLiquidityPercentage} onChange={setInnerLiquidityPercentage} />
                       </Flex>
                       <Flex justifyContent="space-around">
-                        <Button variant="tertiary" size="sm" onClick={() => onUserInput(Field.LIQUIDITY_PERCENT, '25')}>
+                        <Button style={{backgroundColor:"rgb(218, 165, 32)"}} size="sm" onClick={() => onUserInput(Field.LIQUIDITY_PERCENT, '25')}>
                           25%
                         </Button>
-                        <Button variant="tertiary" size="sm" onClick={() => onUserInput(Field.LIQUIDITY_PERCENT, '50')}>
+                        <Button style={{backgroundColor:"rgb(218, 165, 32)"}} size="sm" onClick={() => onUserInput(Field.LIQUIDITY_PERCENT, '50')}>
                           50%
                         </Button>
-                        <Button variant="tertiary" size="sm" onClick={() => onUserInput(Field.LIQUIDITY_PERCENT, '75')}>
+                        <Button style={{backgroundColor:"rgb(218, 165, 32)"}} size="sm" onClick={() => onUserInput(Field.LIQUIDITY_PERCENT, '75')}>
                           75%
                         </Button>
                         <Button
-                          variant="tertiary"
+                          style={{backgroundColor:"rgb(218, 165, 32)",color:'rgb(49, 39, 131)'}}
                           size="sm"
                           onClick={() => onUserInput(Field.LIQUIDITY_PERCENT, '100')}
                         >
@@ -511,25 +512,25 @@ export default function RemoveLiquidity({
             {!showDetailed && (
               <>
                 <ColumnCenter>
-                  <ArrowDown size="16" color={theme.colors.textSubtle} />
+                  <ArrowDown size="16" color="rgb(218, 165, 32)" />
                 </ColumnCenter>
                 <Body>
                   <OutlineCard>
                     <AutoColumn gap="10px">
                       <RowBetween>
-                        <Text fontSize="24px">{formattedAmounts[Field.CURRENCY_A] || '-'}</Text>
+                        <Text fontSize="24px" color='white'>{formattedAmounts[Field.CURRENCY_A] || '-'}</Text>
                         <RowFixed>
                           <CurrencyLogo currency={currencyA} style={{ marginRight: '12px' }} />
-                          <Text fontSize="24px" id="remove-liquidity-tokena-symbol">
+                          <Text fontSize="24px" id="remove-liquidity-tokena-symbol" color='white'>
                             {currencyA?.symbol}
                           </Text>
                         </RowFixed>
                       </RowBetween>
                       <RowBetween>
-                        <Text fontSize="24px">{formattedAmounts[Field.CURRENCY_B] || '-'}</Text>
+                        <Text fontSize="24px" color='white'>{formattedAmounts[Field.CURRENCY_B] || '-'}</Text>
                         <RowFixed>
                           <CurrencyLogo currency={currencyB} style={{ marginRight: '12px' }} />
-                          <Text fontSize="24px" id="remove-liquidity-tokenb-symbol">
+                          <Text fontSize="24px" id="remove-liquidity-tokenb-symbol" color='white'>
                             {currencyB?.symbol}
                           </Text>
                         </RowFixed>
@@ -541,11 +542,13 @@ export default function RemoveLiquidity({
                               to={`/remove/${currencyA === ETHER ? WETH[chainId].address : currencyIdA}/${
                                 currencyB === ETHER ? WETH[chainId].address : currencyIdB
                               }`}
+                              style={{color:'rgb(218, 165, 32)'}}
                             >
                               Receive WBNB
                             </StyledInternalLink>
                           ) : oneCurrencyIsWETH ? (
                             <StyledInternalLink
+                            style={{color:'rgb(218, 165, 32)'}}
                               to={`/remove/${
                                 currencyA && currencyEquals(currencyA, WETH[chainId]) ? 'ETH' : currencyIdA
                               }/${currencyB && currencyEquals(currencyB, WETH[chainId]) ? 'ETH' : currencyIdB}`}
@@ -628,6 +631,7 @@ export default function RemoveLiquidity({
                   <RowBetween>
                     <Button
                       onClick={onAttemptToApprove}
+                      style={{background:"rgb(157 115 9)"}}
                       variant={approval === ApprovalState.APPROVED || signatureData !== null ? 'success' : 'primary'}
                       disabled={approval !== ApprovalState.NOT_APPROVED || signatureData !== null}
                       mr="8px"
@@ -641,6 +645,7 @@ export default function RemoveLiquidity({
                       )}
                     </Button>
                     <Button
+                      style={{background:"rgb(120, 140, 255)"}}
                       onClick={() => {
                         setShowConfirm(true)
                       }}
@@ -666,6 +671,6 @@ export default function RemoveLiquidity({
           <MinimalPositionCard showUnwrapped={oneCurrencyIsWETH} pair={pair} />
         </AutoColumn>
       ) : null}
-    </>
+    </div>
   )
 }

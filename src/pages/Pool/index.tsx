@@ -63,7 +63,7 @@ export default function Pool() {
     <div id='liquid'>
       <CardNav activeIndex={1} />
       <AppBody>
-        <div style={{background:'#788cff'}}>
+        <div style={{background:'#788cff'}} className='liquidHeader'>
         <PageHeader title="Liquidity" description="Add liquidity to receive LP tokens">
           <Button id="join-pool-button" as={Link} to="/add/ETH">
             <TranslatedText translationId={100}>Add Liquidity</TranslatedText>
@@ -74,7 +74,7 @@ export default function Pool() {
           <CardBody style={{background: 'rgb(49, 39, 131)'}}>
             <AutoColumn gap="12px" style={{ width: '100%' }}>
               <RowBetween padding="0 8px">
-                <Text color={theme.colors.text}>
+                <Text color="rgb(218, 165, 32)">
                   <TranslatedText translationId={102}>Your Liquidity</TranslatedText>
                 </Text>
                 <Question
@@ -86,13 +86,13 @@ export default function Pool() {
               </RowBetween>
 
               {!account ? (
-                <LightCard padding="40px" style={{background:'rgb(28, 25, 81)'}}>
+                <LightCard padding="40px" style={{background:'rgb(28, 25, 81)',border:"0px"}}>
                   <Body color={theme.colors.textDisabled} textAlign="center">
                     Connect to a wallet to view your liquidity.
                   </Body>
                 </LightCard>
               ) : v2IsLoading ? (
-                <LightCard padding="40px" style={{background:'rgb(28, 25, 81)'}}>
+                <LightCard padding="40px" style={{background:'rgb(28, 25, 81)',border:"0px"}}>
                   <Body color={theme.colors.textDisabled} textAlign="center">
                     <Dots>Loading</Dots>
                   </Body>
@@ -104,7 +104,7 @@ export default function Pool() {
                   ))}
                 </>
               ) : (
-                <LightCard padding="40px" style={{background:'rgb(28, 25, 81)'}}>
+                <LightCard padding="40px" style={{background:'rgb(28, 25, 81)',border:"0px"}}>
                   <Body color={theme.colors.textDisabled} textAlign="center">
                     <TranslatedText translationId={104}>No liquidity found.</TranslatedText>
                   </Body>

@@ -7,6 +7,7 @@ export const BodyWrapper = styled(Card)`
   max-width: 436px;
   width: 100%;
   z-index: 5;
+  ${window.innerWidth > 865? "margin-right:10%;":"margin-right:auto"}
 `
 
 /**

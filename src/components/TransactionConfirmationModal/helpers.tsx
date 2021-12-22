@@ -7,6 +7,7 @@ import { AutoColumn, ColumnCenter } from '../Column'
 export const Wrapper = styled.div`
   width: 100%;
   overflow-y: auto;
+  background: rgb(49, 39, 131) !important;
 `
 export const Section = styled(AutoColumn)`
   padding: 24px;
@@ -17,9 +18,9 @@ export const ConfirmedIcon = styled(ColumnCenter)`
 `
 
 export const BottomSection = styled(Section)`
-  background-color: ${({ theme }) => theme.colors.invertedContrast};
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  background: rgb(49, 39, 131) !important;
 `
 
 /**
@@ -31,6 +32,7 @@ const StyledContentHeader = styled.div`
 
   & > ${Heading} {
     flex: 1;
+    color:rgb(218, 165, 32);
   }
 `
 
@@ -43,7 +45,7 @@ export const ContentHeader = ({ children, onDismiss }: ContentHeaderProps) => (
   <StyledContentHeader>
     <Heading>{children}</Heading>
     <IconButton onClick={onDismiss} variant="text">
-      <CloseIcon color="primary" />
+      <CloseIcon color="rgb(218, 165, 32)" />
     </IconButton>
   </StyledContentHeader>
 )

@@ -30,7 +30,6 @@ const HistoryIcon = () => (
 )
 
 const StyledPageHeader = styled.div`
-  border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
   padding: 24px;
 `
 

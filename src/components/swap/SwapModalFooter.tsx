@@ -41,7 +41,7 @@ export default function SwapModalFooter({
     <>
       <AutoColumn gap="0px">
         <RowBetween align="center">
-          <Text fontSize="14px">Price</Text>
+          <Text fontSize="14px" color="rgb(218, 165, 32)">Price</Text>
           <Text
             fontSize="14px"
             style={{
@@ -52,6 +52,7 @@ export default function SwapModalFooter({
               paddingLeft: '8px',
               fontWeight: 500
             }}
+            color="white"
           >
             {formatExecutionPrice(trade, showInverted)}
             <StyledBalanceMaxMini onClick={() => setShowInverted(!showInverted)}>
@@ -62,18 +63,18 @@ export default function SwapModalFooter({
 
         <RowBetween>
           <RowFixed>
-            <Text fontSize="14px">
+            <Text fontSize="14px" color="rgb(218, 165, 32)">
               {trade.tradeType === TradeType.EXACT_INPUT ? 'Minimum received' : 'Maximum sold'}
             </Text>
             <QuestionHelper text="Your transaction will revert if there is a large, unfavorable price movement before it is confirmed." />
           </RowFixed>
           <RowFixed>
-            <Text fontSize="14px">
+            <Text fontSize="14px" color="white">
               {trade.tradeType === TradeType.EXACT_INPUT
                 ? slippageAdjustedAmounts[Field.OUTPUT]?.toSignificant(4) ?? '-'
                 : slippageAdjustedAmounts[Field.INPUT]?.toSignificant(4) ?? '-'}
             </Text>
-            <Text fontSize="14px" marginLeft="4px">
+            <Text fontSize="14px" marginLeft="4px" color="white">
               {trade.tradeType === TradeType.EXACT_INPUT
                 ? trade.outputAmount.currency.symbol
                 : trade.inputAmount.currency.symbol}
@@ -82,17 +83,17 @@ export default function SwapModalFooter({
         </RowBetween>
         <RowBetween>
           <RowFixed>
-            <Text fontSize="14px">Price Impact</Text>
+            <Text fontSize="14px" color="rgb(218, 165, 32)">Price Impact</Text>
             <QuestionHelper text="The difference between the market price and your price due to trade size." />
           </RowFixed>
           <FormattedPriceImpact priceImpact={priceImpactWithoutFee} />
         </RowBetween>
         <RowBetween>
           <RowFixed>
-            <Text fontSize="14px">Liquidity Provider Fee</Text>
+            <Text fontSize="14px" color="rgb(218, 165, 32)">Liquidity Provider Fee</Text>
             <QuestionHelper text="For each trade a 0.2% fee is paid. 0.17% goes to liquidity providers and 0.03% goes to the TOP100Swap treasury." />
           </RowFixed>
-          <Text fontSize="14px">
+          <Text fontSize="14px" color="white">
             {realizedLPFee ? `${realizedLPFee?.toSignificant(6)  } ${  trade.inputAmount.currency.symbol}` : '-'}
           </Text>
         </RowBetween>
@@ -103,6 +104,7 @@ export default function SwapModalFooter({
           onClick={onConfirm}
           disabled={disabledConfirm}
           variant={severity > 2 ? 'danger' : 'primary'}
+          style={{backgroundColor:"rgb(218, 165, 32)"}}
           mt="10px"
           id="confirm-swap-or-send"
           fullWidth

@@ -26,39 +26,39 @@ export function ConfirmAddModalBottom({
   return (
     <>
       <RowBetween>
-        <Body>{currencies[Field.CURRENCY_A]?.symbol} Deposited</Body>
+        <Body color='rgb(218, 165, 32)'>{currencies[Field.CURRENCY_A]?.symbol} Deposited</Body>
         <RowFixed>
           <CurrencyLogo currency={currencies[Field.CURRENCY_A]} style={{ marginRight: '8px' }} />
-          <Body>{parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)}</Body>
+          <Body color='white'>{parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)}</Body>
         </RowFixed>
       </RowBetween>
       <RowBetween>
-        <Body>{currencies[Field.CURRENCY_B]?.symbol} Deposited</Body>
+        <Body color='rgb(218, 165, 32)'>{currencies[Field.CURRENCY_B]?.symbol} Deposited</Body>
         <RowFixed>
           <CurrencyLogo currency={currencies[Field.CURRENCY_B]} style={{ marginRight: '8px' }} />
-          <Body>{parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)}</Body>
+          <Body color='white'>{parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)}</Body>
         </RowFixed>
       </RowBetween>
       <RowBetween>
-        <Body>Rates</Body>
-        <Body>
+        <Body color='rgb(218, 165, 32)'>Rates</Body>
+        <Body color='white'>
           {`1 ${currencies[Field.CURRENCY_A]?.symbol} = ${price?.toSignificant(4)} ${
             currencies[Field.CURRENCY_B]?.symbol
           }`}
         </Body>
       </RowBetween>
       <RowBetween style={{ justifyContent: 'flex-end' }}>
-        <Body>
+        <Body color='white'>
           {`1 ${currencies[Field.CURRENCY_B]?.symbol} = ${price?.invert().toSignificant(4)} ${
             currencies[Field.CURRENCY_A]?.symbol
           }`}
         </Body>
       </RowBetween>
       <RowBetween>
-        <Body>Share of Pool:</Body>
-        <Body>{noLiquidity ? '100' : poolTokenPercentage?.toSignificant(4)}%</Body>
+        <Body color='rgb(218, 165, 32)'>Share of Pool:</Body>
+        <Body color='white'>{noLiquidity ? '100' : poolTokenPercentage?.toSignificant(4)}%</Body>
       </RowBetween>
-      <Button mt="20px" onClick={onAdd}>
+      <Button mt="20px" onClick={onAdd} style={{background:'rgb(218, 165, 32)'}}>
         {noLiquidity ? 'Create Pool & Supply' : 'Confirm Supply'}
       </Button>
     </>

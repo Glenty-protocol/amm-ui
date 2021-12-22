@@ -198,7 +198,7 @@ export default function AddLiquidity({
       <AutoColumn gap="20px">
         <LightCard mt="20px" borderRadius="20px">
           <RowFlat>
-            <UIKitText fontSize="48px" mr="8px">
+            <UIKitText fontSize="48px" mr="8px" color='white'>
               {`${currencies[Field.CURRENCY_A]?.symbol}/${currencies[Field.CURRENCY_B]?.symbol}`}
             </UIKitText>
             <DoubleCurrencyLogo
@@ -212,7 +212,7 @@ export default function AddLiquidity({
     ) : (
       <AutoColumn gap="20px">
         <RowFlat style={{ marginTop: '20px' }}>
-          <UIKitText fontSize="48px" mr="8px">
+          <UIKitText fontSize="48px" mr="8px" color='white'>
             {liquidityMinted?.toSignificant(6)}
           </UIKitText>
           <DoubleCurrencyLogo
@@ -222,11 +222,11 @@ export default function AddLiquidity({
           />
         </RowFlat>
         <Row>
-          <UIKitText fontSize="24px">
+          <UIKitText fontSize="24px" color='white'>
             {`${currencies[Field.CURRENCY_A]?.symbol}/${currencies[Field.CURRENCY_B]?.symbol} Pool Tokens`}
           </UIKitText>
         </Row>
-        <Italic fontSize={12} textAlign="left" padding="8px 0 0 0 ">
+        <Italic fontSize={12} textAlign="left" padding="8px 0 0 0 " color='white'>
           {`Output is estimated. If the price changes by more than ${
             allowedSlippage / 100
           }% your transaction will revert.`}
