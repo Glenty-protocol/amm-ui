@@ -7,8 +7,19 @@ document.querySelector('a').addEventListener('click',function(){
 })
 createFooter();
 createMenuFooter();
+window.innerWidth < 900? priceMobile():false
+window.innerWidth < 900?setInterval(function(){
+  document.querySelector('.price')?document.querySelector('.phonePrice').innerText=document.querySelector('.price').innerText:false;
+},3000):false
+
 }
 //global finished
+function priceMobile(){
+  let phonePrice = document.createElement('div')
+document.querySelector('nav').insertBefore(phonePrice, document.querySelector('nav').childNodes[1]);
+document.querySelectorAll('div')[8].querySelector('button').click()
+phonePrice.classList.add('phonePrice');
+}
 function swap(){  
   /* document.querySelector('#root div div').querySelectorAll('div')[16].classList.add('price'); */
   setTimeout(function() {
@@ -183,13 +194,6 @@ function swapMob(){
   document.querySelector('nav').style.backgroundColor='transparent';
   document.querySelector('nav').style.borderBottom='0';
   document.querySelector('button').remove();
-  let phonePrice = document.createElement('div');
-  document.querySelector('nav').insertBefore(phonePrice, document.querySelector('nav').childNodes[1]);
-  document.querySelectorAll('div')[8].querySelector('button').click()
-  phonePrice.classList.add('phonePrice');
-  setInterval(function(){
-    document.querySelector('.price')?phonePrice.innerText=document.querySelector('.price').innerText:false;
-  },3000)
 document.querySelector('#swap-page')?clickSwapMobile():false
 
 /*footer */
