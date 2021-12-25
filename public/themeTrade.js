@@ -11,6 +11,11 @@ window.innerWidth < 900? priceMobile():false
 window.innerWidth < 900?setInterval(function(){
   document.querySelector('.price')?document.querySelector('.phonePrice').innerText=document.querySelector('.price').innerText:false;
 },3000):false
+document.querySelectorAll('.footerLinks')[3].addEventListener('click',function(){
+  document.querySelector('.moreMenu').style.display === "grid"? 
+  document.querySelector('.moreMenu').style.display='none':
+  document.querySelector('.moreMenu').style.display='grid'
+ })
 
 }
 //global finished
