@@ -54,7 +54,7 @@ const docsl = document.createElement("a")
  farmsl.innerHTML= 'Farms'
  gigapooll.innerHTML= 'GigaPool'
  githubl.innerHTML= 'Github'
- docsl.innerHTML= 'Docs'
+ docsl.innerHTML= 'White Paper'
  
 
  homel.setAttribute("href", "https://glenty.com/top100")
@@ -62,7 +62,7 @@ const docsl = document.createElement("a")
  farmsl.setAttribute("href", "https://glenty.com/farms")
  gigapooll.setAttribute("href", "https://giga.glenty.com/")
  githubl.setAttribute("href", "https://github.com/glenty-protocol")
- docsl.setAttribute("href", "https://glenty.gitbook.io/glenty/")
+ docsl.setAttribute("href", "./Glenty Index Token.pdf")
 
  homel.setAttribute("class", "nav-links")
  tradel.setAttribute("class", "nav-links")
@@ -127,7 +127,7 @@ const docsl = document.createElement("a")
  farmsl.innerHTML= 'Farms'
  gigapooll.innerHTML= 'Giga Pool'
  githubl.innerHTML= 'Github'
- docsl.innerHTML= 'Docs'
+ docsl.innerHTML= 'White Paper'
  
 
  homel.setAttribute("href", "https://glenty.com/top100")
@@ -135,7 +135,7 @@ const docsl = document.createElement("a")
  farmsl.setAttribute("href", "https://glenty.com/farms")
  gigapooll.setAttribute("href", "https://giga.glenty.com/")
  githubl.setAttribute("href", "https://github.com/glenty-protocol")
- docsl.setAttribute("href", "https://glenty.gitbook.io/glenty/")
+ docsl.setAttribute("href", "./Glenty Index Token.pdf")
 
  homel.setAttribute("class", "nav-links")
  tradel.setAttribute("class", "nav-links")
@@ -305,7 +305,7 @@ FarmsM.classList.add('moreLinks');
 
 
 githubM.setAttribute('href','https://github.com/glenty-protocol');
-docsM.setAttribute('href','https://glenty.gitbook.io/glenty/');
+docsM.setAttribute('href','./Glenty Index Token.pdf');
 FarmsM.setAttribute('href','/farms');
 
 
@@ -369,7 +369,7 @@ function createMenuFooter(){
 
 
   githubM.setAttribute('href','https://github.com/glenty-protocol');
-  docsM.setAttribute('href','https://glenty.gitbook.io/glenty/');
+  docsM.setAttribute('href','./Glenty Index Token.pdf');
   FarmsM.setAttribute('href','https://glenty.com/farms');
 
 
