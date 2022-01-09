@@ -30,7 +30,6 @@ const useGetPriceData = () => {
       .then(usd=>setU(usd.binancecoin.usd))
     
     setData((bValue/gValue)*bUsd);
-    console.log((bValue/gValue)*bUsd)
     }
     fetchdata();
   },[gValue,bValue,bUsd]);
