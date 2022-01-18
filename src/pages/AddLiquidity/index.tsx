@@ -417,6 +417,7 @@ export default function AddLiquidity({
                         setShowConfirm(true)
                       }
                     }}
+                    style={{background:"rgb(218, 165, 32)",color:"#1c1951"}}
                     disabled={!isValid || approvalA !== ApprovalState.APPROVED || approvalB !== ApprovalState.APPROVED}
                     variant={
                       !isValid && !!parsedAmounts[Field.CURRENCY_A] && !!parsedAmounts[Field.CURRENCY_B]

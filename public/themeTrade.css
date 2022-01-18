@@ -72,8 +72,12 @@ margin-left: -8%;
 }
 .socialL{
   bottom: 20px;
-  right: 20px;
+  right: 0px;
   position: fixed;
+  display: grid !important;
+      grid-template-columns: 45% 45%;
+      grid-column-gap: 5%;
+      grid-row-gap: 20px;
 }
 .socialL div svg,.socialL a svg{
   fill: white;
