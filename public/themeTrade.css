@@ -80,13 +80,13 @@ margin-left: -8%;
   right: 0px;
   position: fixed;
   display: grid !important;
-      grid-template-columns: 45% 45%;
-      grid-column-gap: 5%;
-      grid-row-gap: 20px;
+      grid-template-columns: 46% 46%;
+      grid-column-gap: 3%;
+      grid-row-gap: 15px;
 }
 .socialL div svg,.socialL a svg{
   fill: white;
-  width: 40px;
+  width: 33px;
 }
 
 .fixedFooter{
