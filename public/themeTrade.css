@@ -57,7 +57,12 @@ nav svg{
 }
 .nav-links{
   color: whitesmoke;
-  font-size: 13pt;
+  font-size: 16pt;
+}
+@media only screen and (max-width:1450px){
+  .nav-links{
+    font-size: 13pt;
+  }
 }
 .header-grid{
 width: 50%;
