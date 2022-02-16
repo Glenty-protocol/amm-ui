@@ -63,7 +63,7 @@
       "symbol": "100",
       "address": "0xa8a4df11e38c6ef79f65f22fa0a8ae0cc267637b",
       "chainId": 56,
-      "decimals": 18,
+      "decimals": 9,
       "logoURI": "/images/coins/100.png"
     },
     {
