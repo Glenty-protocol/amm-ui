@@ -326,28 +326,28 @@ export default function RemoveLiquidity({
     return (
       <AutoColumn gap="md" style={{ marginTop: '20px' }}>
         <RowBetween align="flex-end">
-          <Text fontSize="24px">{parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)}</Text>
+          <Text fontSize="24px" color='white'>{parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)}</Text>
           <RowFixed gap="4px">
             <CurrencyLogo currency={currencyA} size="24px" />
-            <Text fontSize="24px" style={{ marginLeft: '10px' }}>
+            <Text fontSize="24px" style={{ marginLeft: '10px' }} color='rgb(218, 165, 32)'>
               {currencyA?.symbol}
             </Text>
           </RowFixed>
         </RowBetween>
         <RowFixed>
-          <Plus size="16" color={theme.colors.textSubtle} />
+          <Plus size="16" color='rgb(218, 165, 32)' />
         </RowFixed>
         <RowBetween align="flex-end">
-          <Text fontSize="24px">{parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)}</Text>
+          <Text fontSize="24px" color='white'>{parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)}</Text>
           <RowFixed gap="4px">
             <CurrencyLogo currency={currencyB} size="24px" />
-            <Text fontSize="24px" style={{ marginLeft: '10px' }}>
+            <Text fontSize="24px" style={{ marginLeft: '10px' }} color='rgb(218, 165, 32)'>
               {currencyB?.symbol}
             </Text>
           </RowFixed>
         </RowBetween>
 
-        <Italic fontSize={12} color={theme.colors.textSubtle} textAlign="left" padding="12px 0 0 0">
+        <Italic fontSize={12} textAlign="left" padding="12px 0 0 0" color='rgb(218, 165, 32)'>
           {`Output is estimated. If the price changes by more than ${
             allowedSlippage / 100
           }% your transaction will revert.`}
@@ -360,29 +360,29 @@ export default function RemoveLiquidity({
     return (
       <>
         <RowBetween>
-          <Text color="textSubtle">{`LP ${currencyA?.symbol}/${currencyB?.symbol}`} Burned</Text>
+          <Text color='white'>{`LP ${currencyA?.symbol}/${currencyB?.symbol}`} Burned</Text>
           <RowFixed>
             <DoubleCurrencyLogo currency0={currencyA} currency1={currencyB} margin />
-            <Text>{parsedAmounts[Field.LIQUIDITY]?.toSignificant(6)}</Text>
+            <Text color='white'>{parsedAmounts[Field.LIQUIDITY]?.toSignificant(6)}</Text>
           </RowFixed>
         </RowBetween>
         {pair && (
           <>
             <RowBetween>
-              <Text color="textSubtle">Price</Text>
-              <Text>
+              <Text color='rgb(218, 165, 32)'>Price</Text>
+              <Text color='white'>
                 1 {currencyA?.symbol} = {tokenA ? pair.priceOf(tokenA).toSignificant(6) : '-'} {currencyB?.symbol}
               </Text>
             </RowBetween>
             <RowBetween>
               <div />
-              <Text>
+              <Text color='white'>
                 1 {currencyB?.symbol} = {tokenB ? pair.priceOf(tokenB).toSignificant(6) : '-'} {currencyA?.symbol}
               </Text>
             </RowBetween>
           </>
         )}
-        <Button disabled={!(approval === ApprovalState.APPROVED || signatureData !== null)} onClick={onRemove}>
+        <Button disabled={!(approval === ApprovalState.APPROVED || signatureData !== null)} onClick={onRemove} style={{backgroundColor:'rgb(218, 165, 32)'}} >
           Confirm
         </Button>
       </>

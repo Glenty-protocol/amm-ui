@@ -2,6 +2,9 @@
   font-family: montserrat !important;
   box-shadow: none !important;
 }
+html,body{
+  height: 100%;
+}
 nav{
 background: transparent !important;
 border-bottom: 0 !important;
@@ -10,7 +13,7 @@ border-bottom: 0 !important;
   background : url("./images/GLENTY_background.png");
   background-position-x:center;
   background-size:cover;
-  padding-bottom: 10%;
+  min-height: 100%;
 }
 nav svg{
   width: 310px !important;
@@ -264,21 +267,11 @@ background: rgb(218, 165, 32) !important;
   html{  
     zoom: 85%;
   }
-  #liquid{
-    margin-right: 10% !important;
-  }
+ 
   #addliqBody{
     width: 30%;
   }
-#root{
-  position: fixed;
-  height: 100%;
-  width: 100%;
-}
-.moreinfo{
-  margin-right:17%;
-  margin-left:-15%;
-}
+
 }
 
 #add-liquidity-input-tokena div,#add-liquidity-input-tokena,#add-liquidity-input-tokenb,#add-liquidity-input-tokenb div{
