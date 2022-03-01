@@ -89,7 +89,7 @@ display: grid;
 text-align: center;
 align-items: center;
 grid-template-columns: 16% 16% 16% 16% 16% 16%;
-margin-left: -15%;
+margin-left: -8%;
 justify-content: center;
 }
 .conatinerAllPc{
