@@ -76,11 +76,11 @@ nav button:last-child{
 }
 .nav-links{
   color: whitesmoke;
-  font-size: 16pt;
+  font-size: 15.5pt;
 }
 @media only screen and (max-width:1450px){
   .nav-links{
-    font-size: 13pt;
+    font-size: 12.5pt;
   }
 }
 .header-grid{
